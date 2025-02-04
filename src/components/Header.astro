@@ -1,0 +1,40 @@
+---
+import Navigation from './Navigation.astro';
+import ThemeIcon from './ThemeIcon.astro';
+
+const currentPath = Astro.url.pathname;
+const pageTitles: Record<string, string> = {
+    "/": "Inicio",
+    "/about/": "Sobre mí",
+    "/projects/": "Mis proyectos",
+    "/contact/": "Contacto",
+};
+const currentTitle = pageTitles[currentPath] || "Página desconocida";
+---
+<header id="site-header" class="bg-cyan-500 text-white grid justify-items-center relative transition-all duration-300 ease-in-out">
+  <h1>{currentTitle}</h1>
+  <button id="toggle-menu" class="text-lg">▼</button>
+
+  <div id="dropdown-menu" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+    <Navigation />
+  </div>
+
+  <ThemeIcon />
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("toggle-menu");
+    const menu = document.getElementById("dropdown-menu");
+
+    toggleButton?.addEventListener("click", () => {
+      if (menu?.classList.contains("max-h-0")) {
+        menu.classList.remove("max-h-0");
+        menu.classList.add("max-h-[200px]"); 
+      } else {
+        menu?.classList.remove("max-h-[200px]");
+        menu?.classList.add("max-h-0");
+      }
+    });
+  });
+</script>
