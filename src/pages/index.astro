@@ -14,9 +14,9 @@ const url = [
 ]
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h1 class="text-3xl text-center font-bold">Bienvenidos a mi portfolio</h1>
+  <h1 class="text-3xl xl:text-5xl text-center font-bold">Bienvenidos a mi portfolio</h1>
 
-  <div class="grid grid-rows-3 gap-5">
+  <div class="w-full h-full grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 items-center justify-items-center gap-5 2xl:gap-20">
     <Card cardTitle={cardsTitle[0]} url={url[0]} />
     <Card cardTitle={cardsTitle[1]} url={url[1]} />
     <Card cardTitle={cardsTitle[2]} url={url[2]} />

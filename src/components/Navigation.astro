@@ -2,29 +2,13 @@
 
 ---
 
-<nav id="dropdown-menu" class="grid grid-rows-4 w-max justify-items-center max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-    <a href="/" class="py-1 px-5">Inicio</a>
-    <a href="/about/" class="py-1 px-5">Sobre m&iacute;</a>
-    <a href="/projects/" class="py-1 px-5">Mis proyectos</a>
-    <a href="/contact/" class="py-1 px-5">Contacto</a>
+<nav id="dropdown-menu" class="grid grid-rows-4 md:grid-rows-1 md:grid-cols-4 max-h-0 lg:max-h-max lg:h-10 overflow-hidden transition-all duration-500 ease-in-out">
+    <a href="/" class="w-full text-center py-1 px-5 dark:lg:hover:bg-slate-800 lg:hover:bg-sky-200">Inicio</a>
+    <a href="/about/" class="w-full text-center py-1 px-5 dark:lg:hover:bg-slate-800 lg:hover:bg-sky-200">Sobre m&iacute;</a>
+    <a href="/projects/" class="w-full text-center py-1 px-5 dark:lg:hover:bg-slate-800 lg:hover:bg-sky-200">Mis proyectos</a>
+    <a href="/contact/" class="w-full text-center py-1 px-5 dark:lg:hover:bg-slate-800 lg:hover:bg-sky-200">Contacto</a>
 </nav>
-<button id="toggle-menu" class="w-max p-2 text-md hover:cursor-pointer">▼</button>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggleButton = document.getElementById("toggle-menu");
-      const menu = document.getElementById("dropdown-menu");
-  
-      toggleButton?.addEventListener("click", () => {
-        if (menu?.classList.contains("max-h-0")) {
-          menu.classList.remove("max-h-0");
-          menu.classList.add("max-h-[200px]");
-          toggleButton.classList.add("rotate-180"); 
-        } else {
-          menu?.classList.remove("max-h-[200px]");
-          menu?.classList.add("max-h-0");
-          toggleButton.classList.remove("rotate-180");
-        }
-      });
-    });
-</script>
+<button id="toggle-menu" class="lg:hidden w-max p-2 text-md hover:cursor-pointer transition-all duration-500 ease-in-out">▼</button>
+
+<script src="../scripts/desplegableMenu.js"></script>

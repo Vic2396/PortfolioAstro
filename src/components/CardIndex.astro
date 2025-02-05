@@ -2,8 +2,9 @@
 const { cardTitle } = Astro.props;
 const { url } = Astro.props;
 ---
-<a href={url}>
-    <div class="grid bg-blue-300 dark:bg-slate-950 h-36 items-center rounded">
+
+<a href={url} class="h-36 min-w-80 max-w-96">
+    <div class="grid bg-blue-300 dark:bg-slate-950 h-full items-center rounded">
         <h2 class="w-full h-max font-bold text-white bg-slate-600 text-center">{cardTitle}</h2>
     </div>
 </a>
