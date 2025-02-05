@@ -3,6 +3,6 @@ import { Image } from 'astro:assets';
 const { platform, username, src } = Astro.props;
 ---
 
-<a href={`https://www.${platform}.com/${username}`}>
-    <Image src={src} alt={platform} class="w-8 h-8" />
+<a href={`https://www.${platform}.com/${username}`} class="hover:scale-110 transition-all duration-200 ease-in-out">
+    <Image src={src} alt={platform} class="w-6 h-6 lg:w-8 lg:h-8" />
 </a>
