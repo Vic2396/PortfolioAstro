@@ -1,0 +1,16 @@
+---
+import Social from './Social.astro';
+import twitter from '../images/twitter-alt-circle.svg';
+import github from '../images/github.svg';
+import youtube from '../images/youtube.svg';
+import instagram from '../images/instagram.svg';
+import telegram from '../images/telegram.svg';
+---
+
+<footer class="p-2 flex gap-5 justify-center bg-blue-300 dark:bg-slate-950">
+    <Social platform="twitter" username="astrodotbuild" src={twitter} />
+    <Social platform="github" username="withastro" src={github} />
+    <Social platform="youtube" username="astrodotbuild" src={youtube} />
+    <Social platform="instagram" username="astrodotbuild" src={instagram} />
+    <Social platform="telegram" username="astrodotbuild" src={telegram} />
+</footer>

@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const { pageTitle } = Astro.props;
@@ -18,5 +19,6 @@ const { pageTitle } = Astro.props;
     <main class="flex-grow bg-white dark:bg-zinc-900 text-black dark:text-white px-2 xl:px-32 2xl:px-48 py-4 flex flex-col items-center gap-10">
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

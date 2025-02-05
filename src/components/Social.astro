@@ -1,0 +1,8 @@
+---
+import { Image } from 'astro:assets';
+const { platform, username, src } = Astro.props;
+---
+
+<a href={`https://www.${platform}.com/${username}`}>
+    <Image src={src} alt={platform} class="w-8 h-8" />
+</a>
