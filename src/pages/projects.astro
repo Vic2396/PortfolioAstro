@@ -1,8 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Card from '../components/CardIndex.astro';
 const pageTitle = "Mis proyectos";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  
+    <div class="w-full h-full grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 items-center justify-items-center gap-5 2xl:gap-20">
+        <Card cardTitle="Tienda de pádel" url="" />
+        <Card cardTitle="Valorant API" url="" />
+        <Card cardTitle="Calculadora JS" url="" />
+        <Card cardTitle="LazyTripZ" url="" />
+    </div>
 </BaseLayout>

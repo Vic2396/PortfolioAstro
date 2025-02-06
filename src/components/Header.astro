@@ -12,7 +12,9 @@ const pageTitles: Record<string, string> = {
 const currentTitle = pageTitles[currentPath] || "Página desconocida";
 ---
 
-<header id="site-header" class="lg:px-24 xl:px-32 2xl:px-48 bg-blue-300 dark:bg-slate-950 text-black dark:text-white font-bold grid lg:grid-cols-[1fr_auto] lg:items-center transition-all duration-500 ease-in-out">
+<header id="site-header" class="fixed w-full lg:px-24 xl:px-32 2xl:px-48 bg-blue-300 dark:bg-slate-950 
+                              text-black dark:text-white font-bold grid lg:grid-cols-[1fr_auto] lg:items-center 
+                              transition-all duration-500 ease-in-out shadow-header dark:shadow-headerDark">
   <h1 class="w-max pt-1 justify-self-center text-xl lg:hidden">{currentTitle}</h1>
   
   <div class="flex flex-col items-center lg:items-start">
