@@ -1,0 +1,9 @@
+---
+const { text, type = "column", reverse = false, cursorHover = "cursor-auto", className } = Astro.props;
+const flexDirection = type === "row" ? "flex-row items-center" : "flex-col";
+---
+
+<label class=`${className} flex ${flexDirection} gap-2 text-black dark:text-white font-bold ${cursorHover}`>
+    { reverse ? <slot /> : text }
+    { reverse ? text : <slot />}
+</label>

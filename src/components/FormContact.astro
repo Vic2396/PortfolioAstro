@@ -1,0 +1,41 @@
+---
+import Input from "./Input.astro";
+import Option from "./OptionRadio.astro";
+import Label from "./Label.astro";
+---
+
+<form action="" class="w-full grid gap-4 text-lg sm:px-24 md:px-36 lg:px-52 xl:px-72 2xl:px-96">
+    <fieldset class="grid gap-4 md:grid-cols-2">
+        <Label text="Nombre" className="md:col-span-2">
+            <Input type="text" name="nombre" />
+        </Label>
+
+        <Label text="Teléfono">
+            <Input type="tel" name="telefono" />
+        </Label>
+
+        <Label text="Email">
+            <Input type="email" name="email" />
+        </Label>
+
+        <Label text="Preferencia de contacto" className="md:col-span-2">
+            <div class="flex flex-row gap-10">
+                <Label text="Teléfono" type="row" reverse={true} cursorHover="cursor-pointer">
+                    <Option name="preferencia" value="teléfono" />
+                </Label>
+
+                <Label text="Email" type="row" reverse={true} cursorHover="cursor-pointer">
+                    <Option name="preferencia" value="email" />
+                </Label>
+            </div>
+        </Label>
+
+        <Label text="Motivo de contacto" className="md:col-span-2">
+            <textarea name="motivo" id="motivo" maxlength="400" placeholder="Indique aquí su motivo de contacto" 
+                    class="resize-none h-28 bg-gray-200 dark:bg-gray-600 rounded p-2 focus:outline-2
+                         focus:outline-slate-500 dark:focus:outline-slate-100 focus:ring-0 placeholder:font-medium" />
+        </Label>
+    </fieldset>
+
+    <button class="p-2 rounded text-white font-bold bg-slate-800 dark:bg-slate-500 dark:active:bg-slate-600 cursor-pointer active:bg-slate-700">Enviar</button>
+</form>
