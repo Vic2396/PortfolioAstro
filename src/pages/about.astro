@@ -2,6 +2,21 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionAboutMe from '../layouts/SectionAboutMe.astro';
 import Timeline from '../components/Timeline.astro';
+import Hability from '../components/Hability.astro';
+import Skill from '../components/Skill.astro';
+import Flag from '../components/Flag.astro';
+
+import Angular from '../images/skills/logo-angular.svg';
+import JS from '../images/skills/logo-javascript.svg';
+import Docker from '../images/skills/logo-docker.svg';
+import Git from '../images/skills/logo-github.svg';
+import HTML from '../images/skills/logo-html5.svg';
+import CSS from '../images/skills/logo-css3.svg';
+import Laravel from '../images/skills/logo-laravel.svg';
+
+import Español from '../images/flags/español.svg';
+import Ingles from '../images/flags/gran bretaña.svg';
+import Valenciano from '../images/flags/valenciano.svg';
 
 const pageTitle = "Sobre mí";
 const titles = [
@@ -90,13 +105,59 @@ const data = [
             }
         ]
     },
-]
+];
+const habilities = { 
+    HTML, 
+    CSS, 
+    JS, 
+    Git, 
+    Docker, 
+    Angular, 
+    Laravel 
+};
+const skills = [
+    "Trabajo en equipo",
+    "Proactivo",
+    "Responsable",
+    "Ordenado"
+];
+const languages = {
+    Español,
+    Ingles,
+    Valenciano
+};
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
-    <div class="grid lg:grid-cols-3 lg:px-20">
-        <SectionAboutMe title={ titles[0] }>
+    <div class="grid gap-4 sm:gap-6 lg:gap-10 lg:px-20 lg:grid-cols-3">
+        <SectionAboutMe title={ titles[0] } className="lg:col-span-2">
             <Timeline events={ data } />
         </SectionAboutMe>
+
+        <div class="flex flex-col gap-4 sm:gap-6 lg:gap-10">
+            <SectionAboutMe title={ titles[1] }>
+                <div class="flex flex-row gap-2 flex-wrap justify-center">
+                    {Object.entries(habilities).map(([name, src]) => (
+                        <Hability name={ name } src={ src } />
+                    ))}
+                </div>
+            </SectionAboutMe>
+    
+            <SectionAboutMe title={ titles[2] }>
+                <div class="flex flex-row gap-2 flex-wrap justify-center">
+                    {skills.map((skill) => (
+                        <Skill name={ skill } />
+                    ))}
+                </div>
+            </SectionAboutMe>
+    
+            <SectionAboutMe title={ titles[3] }>
+                <div class="flex flex-row gap-2 flex-wrap justify-center">
+                    {Object.entries(languages).map(([name, src]) => (
+                        <Flag name={ name } src={ src } />
+                    ))}
+                </div>
+            </SectionAboutMe>
+        </div>
     </div>
 </BaseLayout>
