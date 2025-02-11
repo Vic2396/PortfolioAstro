@@ -1,11 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Card from '../components/Card.astro';
+
+const allProjects = await Astro.glob('../pages/projects/*.md');
 const pageTitle = "Mis proyectos";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-2 items-center justify-items-center gap-5 2xl:gap-20 overflow-auto">
+        {allProjects.map((project) => <Card url={project.url} cardTitle={project.frontmatter.title} />)}
         <Card cardTitle="Tienda de pádel" url="" />
         <Card cardTitle="Valorant API" url="" />
         <Card cardTitle="Calculadora JS" url="" />
