@@ -1,8 +1,102 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionAboutMe from '../layouts/SectionAboutMe.astro';
+import Timeline from '../components/Timeline.astro';
+
 const pageTitle = "Sobre mí";
+const titles = [
+    "Cronología",
+    "Habilidades",
+    "Aptitudes",
+    "Idiomas"
+];
+const data = [
+    {
+        year: "2025",
+        months: [
+            {
+                month: "Sep",
+                events: [
+                    "Empiezo en DXC Technology en la sección de backend"
+                ]
+            },
+            {
+                month: "Jun",
+                events: [
+                    "Termino los estudios de Técnico Superior en Desarrollo de Aplicaciones Web"
+                ]
+            }
+        ]
+    },
+    {
+        year: "2024",
+        months: [
+            {
+                month: "May",
+                events: [
+                    "Dejo mi trabajo como programador industrial en Electrosegura"
+                ]
+            }
+        ]
+    },
+    {
+        year: "2023",
+        months: [
+            {
+                month: "Sep",
+                events: [
+                    "Empiezo los estudios de Técnico Superior en Desarrollo de Aplicaciones Web"
+                ]
+            },
+            {
+                month: "Feb",
+                events: [
+                    "Empiezo como programador industrial en Electrosegura",
+                    "Dejo mi trabajo como programador industrial en Elmec Torres"
+                ]
+            }
+        ]
+    },
+    {
+        year: "2021",
+        months: [
+            {
+                month: "Jul",
+                events: [
+                    "Empiezo como programador industrial en Elmec Torres"
+                ]
+            }
+        ]
+    },
+    {
+        year: "2020",
+        months: [
+            {
+                month: "Jun",
+                events: [
+                    "Termino los estudios de Técnico Superior en Automatización y Robótica Industrial"
+                ]
+            }
+        ]
+    },
+    {
+        year: "2018",
+        months: [
+            {
+                month: "Sept",
+                events: [
+                    "Empiezo los estudios de Técnico Superior en Automatización y Robótica Industrial"
+                ]
+            }
+        ]
+    },
+]
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  
+<BaseLayout pageTitle={ pageTitle }>
+    <div class="grid lg:grid-cols-3 lg:px-20">
+        <SectionAboutMe title={ titles[0] }>
+            <Timeline events={ data } />
+        </SectionAboutMe>
+    </div>
 </BaseLayout>
