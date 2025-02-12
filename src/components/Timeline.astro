@@ -1,7 +1,7 @@
 ---
-import Year from '../components/Year.astro';
-import Month from '../components/Month.astro';
-import Event from '../components/Event.astro';
+import Year from '../components/Year.astro'
+import Month from '../components/Month.astro'
+import Event from '../components/Event.astro'
 
 interface Event {
     event: string;
@@ -17,7 +17,7 @@ interface Year {
     months: Month[];
 }
 
-const { events }: { events: Year[] } = Astro.props as { events: Year[] };
+const { events }: { events: Year[] } = Astro.props as { events: Year[] }
 ---
 
 <div class="grid gap-1 h-48 overflow-auto pr-3 lg:flex-grow lg:max-h-full">

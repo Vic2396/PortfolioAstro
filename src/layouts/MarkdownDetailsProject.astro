@@ -1,15 +1,19 @@
 ---
-import BaseLayout from './BaseLayout.astro';
-const { frontmatter } = Astro.props;
+import BaseLayout from './BaseLayout.astro'
+import { Image } from 'astro:assets'
+
+const { frontmatter } = Astro.props
+const imgPath = import.meta.glob('/src/images/projects/*.{svg,png}', { eager: true }) as Record<string, { default: ImageMetadata }>
+const img = imgPath[`/src${frontmatter.image.src}`]?.default
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <p><em>{frontmatter.description}</em></p>
-  <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
-
-  <p>Escrito por: {frontmatter.author}</p>
-
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-
+  <p class="font-bold italic text-xl md:text-2xl">{frontmatter.title}</p>
+  {img ? (
+    <Image src={img} alt={frontmatter.image.alt} class="w-56" />
+  ) : (
+    <p>Error: Imagen no encontrada</p>
+  )}
+  
   <slot />
 </BaseLayout>

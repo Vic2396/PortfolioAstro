@@ -1,6 +1,6 @@
 ---
-import Navigation from './Navigation.astro';
-import ThemeIcon from './ThemeIcon.astro';
+import Navigation from './Navigation.astro'
+import ThemeIcon from './ThemeIcon.astro'
 
 const currentPath = Astro.url.pathname;
 const pageTitles: Record<string, string> = {
@@ -8,8 +8,8 @@ const pageTitles: Record<string, string> = {
     "/about/": "Sobre mí",
     "/projects/": "Mis proyectos",
     "/contact/": "Contacto",
-};
-const currentTitle = pageTitles[currentPath] || "Página desconocida";
+}
+const currentTitle = pageTitles[currentPath] || "Página desconocida"
 ---
 
 <header id="site-header" class="fixed w-full lg:px-24 xl:px-32 2xl:px-48 bg-blue-300 dark:bg-slate-950 
