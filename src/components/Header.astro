@@ -9,17 +9,20 @@ const pageTitles: Record<string, string> = {
     "/projects/": "Mis proyectos",
     "/contact/": "Contacto",
 }
-const currentTitle = pageTitles[currentPath] || "Página desconocida"
+const currentTitle = pageTitles[currentPath]
+const showNav = Object.keys(pageTitles).includes(currentPath);
 ---
 
-<header id="site-header" class="fixed w-full lg:px-24 xl:px-32 2xl:px-48 bg-blue-300 dark:bg-slate-950 
+<header id="site-header" class="fixed w-full min-h-20 lg:min-h-10 lg:px-24 xl:px-32 2xl:px-48 bg-blue-300 dark:bg-slate-950 
                               text-black dark:text-white font-bold grid lg:grid-cols-[1fr_auto] lg:items-center 
-                              transition-all duration-500 ease-in-out shadow-header dark:shadow-headerDark">
+                              shadow-header dark:shadow-headerDark">
   <h1 class="w-max pt-1 justify-self-center text-xl lg:hidden">{currentTitle}</h1>
   
-  <div class="flex flex-col items-center lg:items-start">
-    <Navigation />
-  </div>
-
+  {showNav && (
+    <div class="flex flex-col items-center lg:items-start">
+      <Navigation />
+    </div>
+  )} 
+  
   <ThemeIcon />
 </header>

@@ -3,17 +3,24 @@ import BaseLayout from './BaseLayout.astro'
 import { Image } from 'astro:assets'
 
 const { frontmatter } = Astro.props
-const imgPath = import.meta.glob('/src/images/projects/*.{svg,png}', { eager: true }) as Record<string, { default: ImageMetadata }>
+const imgPath = import.meta.glob('/src/images/projects/*.{svg,png,jpg}', { eager: true }) as Record<string, { default: ImageMetadata }>
 const img = imgPath[`/src${frontmatter.image.src}`]?.default
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <p class="font-bold italic text-xl md:text-2xl">{frontmatter.title}</p>
-  {img ? (
-    <Image src={img} alt={frontmatter.image.alt} class="w-56" />
-  ) : (
-    <p>Error: Imagen no encontrada</p>
-  )}
-  
-  <slot />
+  <div class="relative w-full h-full flex flex-col gap-8 items-center">
+    <button onclick="history.back()" class="px-2 py-1 rounded-2xl absolute top-0 left-0 cursor-pointer
+                                           bg-blue-300 dark:bg-slate-600 hover:bg-blue-400 dark:hover:bg-slate-700">
+      Volver
+    </button>
+
+    <p class="font-bold italic text-xl md:text-2xl">{frontmatter.title}</p>
+    {img ? (
+      <Image src={img} alt={frontmatter.image.alt} class="w-56" />
+    ) : (
+      <p>Error: Imagen no encontrada</p>
+    )}
+    
+    <slot />
+  </div>
 </BaseLayout>
