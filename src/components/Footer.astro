@@ -1,15 +1,15 @@
 ---
 import Social from './Social.astro'
-import twitter from '../images/social/icons8-x(1).svg'
-import github from '../images/social/icons8-github(1).svg'
-import youtube from '../images/social/icons8-youtube-play.svg'
-import instagram from '../images/social/icons8-instagram.svg'
-import telegram from '../images/social/icons8-telegram-app.svg'
-import linkedin from '../images/social/icons8-linkedin.svg'
+import x from '../images/social/x.svg'
+import github from '../images/social/github.svg'
+import youtube from '../images/social/youtube.svg'
+import instagram from '../images/social/instagram-color.svg'
+import telegram from '../images/social/telegram.svg'
+import linkedin from '../images/social/linkedin-black.svg'
 import discord from '../images/social/icons8-discord.svg'
 
 const platforms = {
-    twitter,
+    x,
     github,
     youtube,
     instagram,
@@ -19,9 +19,15 @@ const platforms = {
 }
 ---
 
-<footer class="p-2 flex-shrink-0 w-full flex gap-5 justify-center bg-blue-300 dark:bg-slate-950 
+<footer class="p-1 flex-shrink-0 w-full flex gap-5 justify-center bg-slate-700 dark:bg-slate-950 
+                shadow-footer dark:shadow-footerDark">
+    <p class="text-white font-title tracking-widest">V&iacute;ctor Mora © 2025 </p>
+</footer>
+<!-- Footer 
+<footer class="p-2 flex-shrink-0 w-full flex gap-5 justify-center bg-slate-700 dark:bg-slate-950 
                 shadow-footer dark:shadow-footerDark">
     {Object.entries(platforms).map(([name, src]) => (
         <Social platform={ name } src={ src } />
     ))}
 </footer>
+-->

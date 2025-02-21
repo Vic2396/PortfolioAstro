@@ -1,9 +1,9 @@
 ---
 import { Image } from 'astro:assets'
 
-const { platform, src } = Astro.props
+const { platform, src, link } = Astro.props
 ---
 
-<a href={`https://www.${platform}.com/victor`} class="lg:hover:scale-110 transition-all duration-200 ease-in-out">
-    <Image src={ src } alt={ platform } class="w-6 h-6 lg:w-8 lg:h-8" />
+<a href={ link } target="_blank" rel="noopener noreferrer" class="lg:hover:scale-110 transition-all duration-200 ease-in-out p-2 md:p-3 rounded-full bg-slate-800 dark:bg-slate-950">
+    <Image src={ src } alt={ platform } class="w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16" />
 </a>

@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
-    --shadow-header: 0px 5px 5px 0px rgba(15, 23, 42, 0.5);
-    --shadow-headerDark: 0px 5px 5px 0px rgba(244, 63, 94, 0.5);
-    --shadow-footer: 0px -5px 5px 0px rgba(15, 23, 42, 0.5);
-    --shadow-footerDark: 0px -5px 5px 0px rgba(244, 63, 94, 0.5);
+    --shadow-header: 0px 5px 5px 0px rgba(163, 230, 53, 0.7);
+    --shadow-headerDark: 0px 5px 5px 0px rgba(13, 148, 136, 0.7);
+    --shadow-footer: 0px -5px 5px 0px rgba(163, 230, 53, 0.7);
+    --shadow-footerDark: 0px -5px 5px 0px rgba(13, 148, 136, 0.7);
+    --font-portfolio: Rajdhani, sans-serif;
+    --font-text: "Comic Neue", cursive;
+    --font-title: "Bangers", cursive;
 }

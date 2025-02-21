@@ -1,30 +1,64 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import Card from '../components/Card.astro'
+import { Image } from 'astro:assets'
+import Avatar from '../images/avatar.jpg'
+import Social from '../components/Social.astro'
+
+import youtube from '../images/social/youtube.svg'
+import instagram from '../images/social/instagram-color.svg'
+import telegram from '../images/social/telegram.svg'
+import linkedin from '../images/social/linkedin-circle.svg'
+import discord from '../images/social/discord.svg'
 
 const pageTitle = "Inicio"
-const cards = [
+const chanels = [
   {
-    title: "Sobre mí",
-    url: "/about/"
+    name: "youtube",
+    img: youtube,
+    link: "https://www.youtube.com/@VicMR23"
   },
   {
-    title: "Mis proyectos",
-    url: "/projects/"
+    name: "instagram",
+    img: instagram,
+    link: "https://www.instagram.com/vic_mora23"
   },
   {
-    title: "Contacto",
-    url: "/contact/"
+    name: "telegram",
+    img: telegram,
+    link: "https://t.me/vic23mr"
+  },
+  {
+    name: "linkedin",
+    img: linkedin,
+    link: "https://www.linkedin.com/in/víctor-mora-rosique/"
+  },
+  {
+    name: "discord",
+    img: discord,
+    link: "https://discord.com/users/0424"
   }
 ]
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
-  <h1 class="text-3xl xl:text-5xl text-center font-bold">Bienvenidos a mi portfolio</h1>
-
-  <div class="w-full h-full grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 items-center justify-items-center gap-5 2xl:gap-20">
-    {cards.map(({ title, url }) => (
-      <Card cardTitle={ title } url={ url } />
-    ))}
+  <div class="h-full flex flex-col items-center justify-center gap-10 md:gap-20">
+    <div>
+      <h1 class="text-3xl md:text-4xl xl:text-5xl text-center font-title tracking-widest">¡Hola!<br>Soy Víctor Mora</h1>
+      <h2 class="text-2xl md:text-3xl xl:text-4xl text-center font-title tracking-widest">Web developer</h2>
+    </div>
+  
+    <div class="w-full flex flex-col items-center gap-10 md:gap-20 2xl:gap-20">
+      <Image src={ Avatar } alt="Avatar" class="w-36 h-36 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-full" />
+  
+      <section class="w-full h-max flex flex-col items-center gap-5">
+        <h3 class="text-lg xl:text-4xl text-center font-title tracking-widest">S&iacute;gueme en algunos de mis canales si quieres conocer m&aacute;s sobre m&iacute;</h3>
+      
+        <div class="w-max h-max grid grid-cols-5 grid-rows-1 gap-5">
+          {chanels.map(({ name, img, link }) => (
+            <Social platform={ name } src={ img } link={ link } />
+          ))}
+        </div>
+      </section>
+    </div>
   </div>
 </BaseLayout>

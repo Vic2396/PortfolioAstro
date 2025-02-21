@@ -1,19 +1,26 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import SectionAboutMeLayout from '../layouts/SectionAboutMeLayout.astro'
-import ObjectRowLayout from '../layouts/ObjectRowLayout.astro'
 import Timeline from '../components/Timeline.astro'
 import Hability from '../components/Hability.astro'
 import Skill from '../components/Skill.astro'
 import Flag from '../components/Flag.astro'
 
-import Angular from '../images/skills/logo-angular.svg'
-import JS from '../images/skills/logo-javascript.svg'
-import Docker from '../images/skills/logo-docker.svg'
-import Git from '../images/skills/logo-github.svg'
-import HTML from '../images/skills/logo-html5.svg'
-import CSS from '../images/skills/logo-css3.svg'
-import Laravel from '../images/skills/logo-laravel.svg'
+import HTML from '../images/skills/html.svg'
+import CSS from '../images/skills/logo-css.avif'
+import Tailwind from '../images/skills/tailwind-green.svg'
+import Figma from '../images/skills/figma.svg'
+import Java from '../images/skills/java.svg'
+import JS from '../images/skills/js.svg'
+import TP from '../images/skills/typescript.svg'
+import Angular from '../images/skills/angular.svg'
+import Astros from '../images/skills/astro.svg'
+import Laravel from '../images/skills/laravel.svg'
+import MySQL from '../images/skills/mysql.svg'
+import Docker from '../images/skills/docker.svg'
+import Git from '../images/skills/github-color.svg'
+import Ubuntu from '../images/skills/ubuntu.svg'
+import Vstudio from '../images/skills/vstudio.svg'
 
 import Español from '../images/flags/español.svg'
 import Ingles from '../images/flags/gran bretaña.svg'
@@ -109,15 +116,23 @@ const data = [
 ]
 const habilities = { 
     HTML, 
-    CSS, 
-    JS, 
+    CSS,
+    Tailwind,
+    Figma, 
+    Java,
+    JS,
+    TP,
+    Angular,
+    Astros,
+    Laravel,
+    MySQL,
+    Docker,
     Git, 
-    Docker, 
-    Angular, 
-    Laravel 
+    Ubuntu,
+    Vstudio
 }
 const skills = [
-    "Trabajo en equipo",
+    "Trabajar en equipo",
     "Proactivo",
     "Responsable",
     "Ordenado"
@@ -130,35 +145,38 @@ const languages = {
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
-    <div class="h-full grid gap-4 sm:gap-6 lg:gap-10 lg:px-20 lg:grid-cols-3">
-        <SectionAboutMeLayout title={ titles[0] } className="lg:col-span-2">
+    <div class="h-full w-full grid gap-5 content-arround grid-cols-1 grid-rows-4 lg:px-20 md:grid-cols-3">
+
+        <SectionAboutMeLayout title={ titles[0] } className="row-span-2 md:row-span-4 md:col-span-2">
             <Timeline events={ data } />
         </SectionAboutMeLayout>
 
-        <div class="flex flex-col gap-4 sm:gap-6 lg:gap-10">
-            <SectionAboutMeLayout title={ titles[1] }>
-                <ObjectRowLayout>
-                    {Object.entries(habilities).map(([name, src]) => (
+        <SectionAboutMeLayout title={ titles[1] } className="row-span-1 md:row-span-3">
+            <div class="w-full grid grid-flow-col gap-4 pb-3 overflow-auto md:pb-0 md:grid-cols-2 lg:grid-cols-3 md:grid-flow-row justify-items-center">
+                {Object.entries(habilities).map(([name, src]) => (
+                    <div>
                         <Hability name={ name } src={ src } />
-                    ))}
-                </ObjectRowLayout>
-            </SectionAboutMeLayout>
-    
-            <SectionAboutMeLayout title={ titles[2] }>
-                <ObjectRowLayout>
-                    {skills.map((skill) => (
-                        <Skill name={ skill } />
-                    ))}
-                </ObjectRowLayout>
-            </SectionAboutMeLayout>
-    
+                    </div>
+                ))}
+            </div>
+        </SectionAboutMeLayout>
+
+        <SectionAboutMeLayout title={ titles[2] } className="row-span-1">
+            <div class="w-full grid grid-cols-2 grid-rows-2 gap-2 items-center">
+                {skills.map((skill) => (
+                    <Skill name={ skill } />
+                ))}
+            </div>
+        </SectionAboutMeLayout>
+        
+            <!-- Languages 
             <SectionAboutMeLayout title={ titles[3] }>
-                <ObjectRowLayout>
+                <div class="grid grid-flow-col gap-2 justify-center">
                     {Object.entries(languages).map(([name, src]) => (
                         <Flag name={ name } src={ src } />
                     ))}
-                </ObjectRowLayout>
+                </div>
             </SectionAboutMeLayout>
-        </div>
+            -->
     </div>
 </BaseLayout>

@@ -20,7 +20,7 @@ interface Year {
 const { events }: { events: Year[] } = Astro.props as { events: Year[] }
 ---
 
-<div class="grid gap-1 h-48 overflow-auto pr-3 lg:flex-grow lg:max-h-full">
+<div class="grid gap-1 overflow-auto pr-3 lg:flex-grow lg:max-h-full">
     {events.map(({ year, months }) => (
         <div class="flex flex-row gap-2">
             <Year year={ year } />

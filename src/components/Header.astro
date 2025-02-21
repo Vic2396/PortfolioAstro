@@ -13,9 +13,9 @@ const currentTitle = pageTitles[currentPath]
 const showNav = Object.keys(pageTitles).includes(currentPath);
 ---
 
-<header id="site-header" class="fixed w-full min-h-20 lg:min-h-10 lg:px-24 xl:px-32 2xl:px-48 bg-blue-300 dark:bg-slate-950 
-                              text-black dark:text-white font-bold grid lg:grid-cols-[1fr_auto] lg:items-center 
-                              shadow-header dark:shadow-headerDark">
+<header id="site-header" class="fixed w-full min-h-20 lg:min-h-10 lg:px-24 xl:px-32 2xl:px-48 bg-slate-700 dark:bg-slate-950 
+                              text-white grid lg:grid-cols-[1fr_auto] lg:items-center 
+                              shadow-header dark:shadow-headerDark font-title tracking-widest">
   <h1 class="w-max pt-1 justify-self-center text-xl lg:hidden">{currentTitle}</h1>
   
   {showNav && (

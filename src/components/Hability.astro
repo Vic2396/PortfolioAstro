@@ -4,6 +4,6 @@ import { Image } from 'astro:assets'
 const { src, name } = Astro.props
 ---
 
-<div class="rounded-full bg-slate-300 dark:bg-amber-50">
-    <Image src={ src } alt={ name } class="p-2 w-10 h-10 sm:w-14 sm:h-14 " />
+<div class="p-1 flex w-14 h-14 xl:w-20 xl:h-20">
+    <Image src={ src } alt={ name } class="object-contain" />
 </div>
