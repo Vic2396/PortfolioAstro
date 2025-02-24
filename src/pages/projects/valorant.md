@@ -17,6 +17,7 @@ features:
     3: 'Listado de mapas'
 
 technologies: [
+    'figma',
     'vscode', 
     'html', 
     'tailwind', 

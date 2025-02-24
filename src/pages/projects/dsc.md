@@ -25,6 +25,7 @@ technologies: [
     'astro', 
     'tailwind', 
     'javascript',
+    'laravel',
     'github',
     ]
 ---

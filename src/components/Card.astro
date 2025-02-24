@@ -4,11 +4,11 @@ import { Image } from 'astro:assets'
 const { cardTitle, img, url } = Astro.props
 ---
 
-<a href={ url } class="relative grid justify-items-center items-center h-36 w-80 bg-slate-700 dark:bg-slate-950 rounded 
-                        shadow shadow-lime-400 dark:shadow-teal-400 lg:hover:scale-110 transition-all 
+<a href={ url } class="relative grid justify-items-center items-center h-72 w-full bg-slate-700 dark:bg-slate-950 rounded 
+                        shadow hover:shadow-lime-400 hover:dark:shadow-teal-400 lg:hover:scale-105 hover:z-30 transition-all 
                         duration-200 ease-in-out overflow-hidden">
     
-    <h2 class="absolute top-0 w-full h-max font-title tracking-widest text-white bg-slate-600 text-center">
+    <h2 class="absolute top-0 w-full h-max font-title tracking-widest dark:text-white bg-lime-400 dark:bg-slate-600 text-center">
         { cardTitle }
     </h2>
     <Image src={ img } alt={ cardTitle } width=200 height=200 class="w-auto h-2/3" />

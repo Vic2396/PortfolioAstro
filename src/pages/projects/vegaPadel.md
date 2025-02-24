@@ -19,6 +19,7 @@ features:
     4: 'Secciones de diferentes productos con filtros de selección'
 
 technologies: [
+    'figma',
     'vscode', 
     'html',
     'css', 

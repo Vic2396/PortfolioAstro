@@ -7,9 +7,12 @@ const pageTitle = "Mis proyectos"
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
-    <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-2 items-center justify-items-center gap-5 2xl:gap-20">
-        {allProjects.map((project) => 
-            <Card url={ project.url } cardTitle={ project.frontmatter.title } img={ project.frontmatter.image.src } />
-        )}
-    </div>
+    <section class="flex flex-col items-center gap-10">
+        <h1 class="text-xl md:text-2xl 2xl:text-3xl text-center font-title tracking-widest">Estos son los proyectos que tengo desarrollados hasta el momento</h1>
+        <div class="w-full h-max grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center justify-items-center gap-5">
+            {allProjects.map((project) => 
+                <Card url={ project.url } cardTitle={ project.frontmatter.title } img={ project.frontmatter.image.src } />
+            )}
+        </div>
+    </section>
 </BaseLayout>
