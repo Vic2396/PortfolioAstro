@@ -17,4 +17,13 @@ features:
     2: 'Diferentes opciones de pago'
     3: 'Base de datos de usuarios e historial de pedidos'
     4: 'Secciones de diferentes productos con filtros de selección'
+
+technologies: [
+    'vscode', 
+    'html',
+    'css', 
+    'tailwind', 
+    'javascript',
+    'github'
+    ]
 ---

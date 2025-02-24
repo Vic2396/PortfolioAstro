@@ -24,9 +24,7 @@ technologies: [
     'vscode', 
     'astro', 
     'tailwind', 
+    'javascript',
     'github',
-    'astro', 
-    'tailwind', 
-    'github'
     ]
 ---

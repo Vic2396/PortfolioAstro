@@ -19,10 +19,10 @@ features:
     5: 'Listado de comics en los que aparece héroe'
 
 technologies: [
-    'figma', 
     'vscode', 
-    'astro', 
+    'angular', 
     'tailwind', 
+    'typescript',
     'github'
     ]
 ---

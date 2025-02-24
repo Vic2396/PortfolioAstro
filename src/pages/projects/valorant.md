@@ -15,4 +15,12 @@ features:
     1: 'Listado de personajes'
     2: 'Detalles del personaje'
     3: 'Listado de mapas'
+
+technologies: [
+    'vscode', 
+    'html', 
+    'tailwind', 
+    'javascript',
+    'github'
+    ]
 ---
