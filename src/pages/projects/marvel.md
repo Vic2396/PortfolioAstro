@@ -1,0 +1,28 @@
+---
+layout: ../../layouts/MarkdownDetailsProject.astro
+
+title: 'Marvel API'
+
+image:
+    src: '/projects/marvel-comics.png'
+
+description: 'Marvel API es una práctica realizada entre compañeros de clase, donde hemos puesto a prueba nuestra visión de diseño a la hora de mostrar héroes de Marvel junto con sus detalles.'
+
+challenges:
+    1: 'El mayor reto fue hacer el dashboard, de forma que quedara un diseño interesante y responsive con los héroes que aparecen de forma aleatoria.'
+
+features:
+    1: '10 Héroes top en Dashboard'
+    2: 'Buscador de héroes'
+    3: 'Listado de héroes por id y nombre'
+    4: 'Detalles de héroe'
+    5: 'Listado de comics en los que aparece héroe'
+
+technologies: [
+    'figma', 
+    'vscode', 
+    'astro', 
+    'tailwind', 
+    'github'
+    ]
+---

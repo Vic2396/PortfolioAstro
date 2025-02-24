@@ -2,25 +2,77 @@
 import BaseLayout from './BaseLayout.astro'
 import { Image } from 'astro:assets'
 
+const technologies = {
+  'angular': '/technologies/angular.svg',
+  'astro': '/technologies/astro.svg',
+  'docker': '/technologies/docker.svg',
+  'figma': '/technologies/figma.svg',
+  'github': '/technologies/github-color.svg',
+  'html': '/technologies/html.svg',
+  'java': '/technologies/java.svg',
+  'javascript': '/technologies/js.svg',
+  'laravel': '/technologies/laravel.svg',
+  'css': '/technologies/logo-css.avif',
+  'mysql': '/technologies/mysql.svg',
+  'tailwind': '/technologies/tailwind-green.svg',
+  'typescript': '/technologies/typescript.svg',
+  'ubuntu': '/technologies/ubuntu.svg',
+  'vscode': '/technologies/vscode.svg',
+}
 const { frontmatter } = Astro.props
-const imgPath = import.meta.glob('/src/images/projects/*.{svg,png,jpg}', { eager: true }) as Record<string, { default: ImageMetadata }>
-const img = imgPath[`/src${frontmatter.image.src}`]?.default
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <div class="relative w-full h-full flex flex-col gap-8 items-center">
-    <button onclick="history.back()" class="px-2 py-1 rounded-2xl absolute top-0 left-0 cursor-pointer
+  <div class="relative w-full px-2 flex flex-col gap-8 items-center">
+    <button onclick="history.back()" class="font-title tracking-widest text-sm md:text-lg px-2 py-1 rounded-2xl absolute top-0 left-0 cursor-pointer
                                            bg-blue-300 dark:bg-slate-600 hover:bg-blue-400 dark:hover:bg-slate-700">
       Volver
     </button>
 
-    <p class="font-bold italic text-xl md:text-2xl">{frontmatter.title}</p>
-    {img ? (
-      <Image src={img} alt={frontmatter.image.alt} class="w-56" />
-    ) : (
-      <p>Error: Imagen no encontrada</p>
-    )}
+    <section class="w-full flex flex-col items-center gap-4 text-justify">
+      <h1 class="font-title tracking-widest text-xl md:text-2xl">
+        { frontmatter.title }
+      </h1>
+      <Image src={ frontmatter.image.src } alt={ frontmatter.title } width=300 height=200 class="w-32 h-32 md:w-56 md:h-56 object-contain rounded-full bg-neutral-600" />
+
+      <div class="flex flex-col gap-6 md:text-xl">
+        <p class="font-text">{ frontmatter.description }</p>
+        <section>
+          <h2 class="font-title tracking-widest">¿C&uacute;al ha sido el desaf&iacute;o?</h2>
+
+          <ul class="font-text flex flex-col gap-4">
+            {Object.values(frontmatter.challenges).map((challenge) => (
+              <li>{ challenge }</li>
+            ))}
+          </ul>
+        </section>
+        <section>
+          <h2 class="font-title tracking-widest">Funciones principales</h2>
+
+          <ul class="font-text pl-4 list-outside list-disc">
+            {Object.values(frontmatter.features).map((feature) => (
+              <li>{ feature }</li>
+            ))}
+          </ul>
+        </section>
+        {frontmatter.technologies && 
+          <section class="flex flex-col gap-4">
+            <h2 class="font-title tracking-widest">Tecnolog&iacute;as utilizadas</h2>
     
-    <slot />
+            <ul class="font-text flex flex-row gap-4 overflow-auto">
+              {frontmatter.technologies.map((technology: keyof typeof technologies) => (
+                technologies[technology] ? (
+                  <li class="p-2 md:p-3 rounded-full bg-slate-800 dark:bg-slate-950">
+                    <Image src={technologies[technology]} alt={technology} width=50 height=50 class="w-8 h-8 object-contain" />
+                  </li>
+                ) : (
+                  <li>{technology}</li>
+                )
+              ))}
+            </ul>
+          </section>
+        }
+      </div>
+    </section>
   </div>
 </BaseLayout>
