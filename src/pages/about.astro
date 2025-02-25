@@ -4,7 +4,6 @@ import SectionAboutMeLayout from '../layouts/SectionAboutMeLayout.astro'
 import Timeline from '../components/Timeline.astro'
 import Hability from '../components/Hability.astro'
 import Skill from '../components/Skill.astro'
-import Flag from '../components/Flag.astro'
 
 import HTML from '../images/skills/html.svg'
 import CSS from '../images/skills/logo-css.avif'
@@ -21,10 +20,6 @@ import Docker from '../images/skills/docker.svg'
 import Git from '../images/skills/github-color.svg'
 import Ubuntu from '../images/skills/ubuntu.svg'
 import Vstudio from '../images/skills/vstudio.svg'
-
-import Español from '../images/flags/español.svg'
-import Ingles from '../images/flags/gran bretaña.svg'
-import Valenciano from '../images/flags/valenciano.svg'
 
 const pageTitle = "Sobre mí"
 const titles = [
@@ -137,11 +132,6 @@ const skills = [
     "Responsable",
     "Ordenado"
 ]
-const languages = {
-    Español,
-    Ingles,
-    Valenciano
-}
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
@@ -168,15 +158,5 @@ const languages = {
                 ))}
             </div>
         </SectionAboutMeLayout>
-        
-            <!-- Languages 
-            <SectionAboutMeLayout title={ titles[3] }>
-                <div class="grid grid-flow-col gap-2 justify-center">
-                    {Object.entries(languages).map(([name, src]) => (
-                        <Flag name={ name } src={ src } />
-                    ))}
-                </div>
-            </SectionAboutMeLayout>
-            -->
     </div>
 </BaseLayout>
