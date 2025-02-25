@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro'
 import { Image } from 'astro:assets'
+import git from '../images/social/github-round-svgrepo-com.svg'
 
 const technologies = {
   'angular': '/technologies/angular.svg',
@@ -24,12 +25,12 @@ const { frontmatter } = Astro.props
 
 <BaseLayout pageTitle={frontmatter.title}>
   <div class="relative w-full px-2 flex flex-col gap-8 items-center">
-    <button onclick="history.back()" class="font-title tracking-widest text-sm md:text-lg px-2 py-1 rounded-2xl absolute top-0 left-0 cursor-pointer
+    <button onclick="history.back()" class="font-title z-10 tracking-widest text-sm md:text-lg px-2 py-1 rounded-2xl absolute top-0 left-0 cursor-pointer
                                            bg-blue-300 dark:bg-slate-600 hover:bg-blue-400 dark:hover:bg-slate-700">
       Volver
     </button>
 
-    <section class="w-full grid grid-cols-1 2xl:grid-cols-3 justify-items-center items-center gap-4 text-justify">
+    <section class="relative w-full grid grid-cols-1 2xl:grid-cols-3 justify-items-center items-center gap-4 text-justify">
       <h1 class="2xl:col-span-3 font-title tracking-widest text-xl md:text-2xl">
         { frontmatter.title }
       </h1>
@@ -79,6 +80,12 @@ const { frontmatter } = Astro.props
           </section>
         }
       </div>
+
+      { frontmatter.github && 
+        <a href={ frontmatter.github } target="_blank" rel="noopener noreferrer" class="flex absolute top-0 right-0">
+          <Image src={ git } alt="git" width=40 height=30 class="p-0.5 bg-blue-200 hover:bg-blue-300 dark:bg-slate-300 dark:hover:bg-slate-200 rounded" />
+        </a>
+      }
     </section>
   </div>
 </BaseLayout>

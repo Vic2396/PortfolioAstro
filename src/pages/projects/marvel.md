@@ -6,6 +6,8 @@ title: 'Marvel API'
 image:
     src: '/projects/marvel-comics.png'
 
+github: 'https://github.com/Vic2396/practicaAngular2'
+
 description: 'Marvel API es una práctica realizada entre compañeros de clase, donde hemos puesto a prueba nuestra visión de diseño a la hora de mostrar héroes de Marvel junto con sus detalles.'
 
 challenges:

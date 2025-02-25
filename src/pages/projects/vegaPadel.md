@@ -6,6 +6,8 @@ title: 'Vega Pádel'
 image: 
     src: '/projects/vegaPadel.svg'
 
+github: 'https://github.com/Vic2396/VegaPadel'
+
 description: 'Vega Pádel es el proyecto de dos amigos, que de la pasión por este deporte lo hicieron su trabajo. Abrieron su primera tienda física y decidieron expandirse de forma virtual para llegar a más gente.'
 
 challenges:
