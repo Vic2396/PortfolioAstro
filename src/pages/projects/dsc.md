@@ -12,12 +12,10 @@ challenges:
     1: 'El gran reto ha sido diseñarle el sistema de gestión de citas, teniendo en cuenta los tiempos según el servicio que se realiza e incluso pudiendo personalizar tiempos con usuarios puntuales cuando son excepciones para así optimizar el día.'
 
 features:
-    1: 'Gestión de citas'
-    2: 'Personalización de tiempos de servicios para usuarios con excepciones'
-    3: 'Recordatorios para clientes'
-    4: 'Diferentes opciones de pago'
-    5: 'Base de datos de usuarios e historial de pedidos y citas'
-    6: 'Secciones de productos capilares y ropa'
+    1: 'Gestión de citas y recordatorios'
+    2: 'Diferentes opciones de pago'
+    3: 'Base de datos de usuarios e historial de pedidos y citas'
+    4: 'Secciones de productos capilares y ropa'
 
 technologies: [
     'figma', 

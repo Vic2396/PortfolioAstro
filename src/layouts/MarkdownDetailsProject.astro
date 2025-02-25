@@ -29,19 +29,19 @@ const { frontmatter } = Astro.props
       Volver
     </button>
 
-    <section class="w-full flex flex-col items-center gap-4 text-justify">
-      <h1 class="font-title tracking-widest text-xl md:text-2xl">
+    <section class="w-full grid grid-cols-1 2xl:grid-cols-3 justify-items-center items-center gap-4 text-justify">
+      <h1 class="2xl:col-span-3 font-title tracking-widest text-xl md:text-2xl">
         { frontmatter.title }
       </h1>
 
-      <Image src={ frontmatter.image.src } alt={ frontmatter.title } width=300 height=200 class="w-32 h-32 md:w-56 md:h-56 object-contain rounded-full bg-neutral-600 shadow shadow-lime-400 dark:shadow-teal-400" />
+      <Image src={ frontmatter.image.src } alt={ frontmatter.title } width=300 height=200 class="w-32 h-32 md:w-40 md:h-40 object-contain rounded-full bg-neutral-600 shadow shadow-lime-400 dark:shadow-teal-400" />
       
-      <div class="w-full grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6 md:text-xl">
-        <p class="font-text md:col-span-2 2xl:col-span-3 p-2 rounded bg-slate-200 dark:bg-slate-900 shadow shadow-black dark:shadow-white">
-          { frontmatter.description }
-        </p>
+      <p class="font-text font-bold 2xl:col-span-2 p-2">
+        { frontmatter.description }
+      </p>
 
-        <section class="p-2 rounded bg-slate-200 dark:bg-slate-900 shadow shadow-black dark:shadow-white">
+      <div class="w-full 2xl:col-span-3 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6 md:text-xl">
+        <section class="p-2 2xl:col-span-2 rounded bg-slate-200 dark:bg-slate-900 shadow shadow-black dark:shadow-white">
           <h2 class="text-center font-title tracking-widest">¿C&uacute;al ha sido el desaf&iacute;o?</h2>
 
           <ul class="font-text flex flex-col gap-4">
@@ -62,13 +62,13 @@ const { frontmatter } = Astro.props
         </section>
 
         {frontmatter.technologies && 
-          <section class="p-2 md:col-span-2 2xl:col-span-1 rounded bg-slate-200 dark:bg-slate-900 shadow shadow-black dark:shadow-white flex flex-col gap-4">
+          <section class="p-2 md:col-span-2 2xl:col-span-3 rounded bg-slate-200 dark:bg-slate-900 shadow shadow-black dark:shadow-white flex flex-col gap-4">
             <h2 class="text-center font-title tracking-widest">Tecnolog&iacute;as utilizadas</h2>
     
-            <ul class="w-full font-text pb-3 grid grid-flow-col 2xl:grid-rows-2 justify-between gap-4 overflow-auto">
+            <ul class="w-full font-text pb-3 grid grid-flow-col  justify-between gap-4 overflow-auto">
               {frontmatter.technologies.map((technology: keyof typeof technologies) => (
                 technologies[technology] ? (
-                  <li class="w-14 h-14 2xl:w-16 2xl:h-16 flex p-3 md:p-3 rounded-full bg-slate-800 dark:bg-slate-800">
+                  <li class="w-14 h-14 flex p-3 md:p-3 rounded-full bg-slate-800 dark:bg-slate-800">
                     <Image src={technologies[technology]} alt={technology} width=50 height=50 class="object-contain" />
                   </li>
                 ) : (
