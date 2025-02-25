@@ -8,16 +8,16 @@ image:
 
 github: 'https://github.com/Vic2396/VegaPadel'
 
-description: 'Vega Pádel es el proyecto de dos amigos, que de la pasión por este deporte lo hicieron su trabajo. Abrieron su primera tienda física y decidieron expandirse de forma virtual para llegar a más gente.'
+description: 'Vega Pádel es un club de pádel que a la vez tiene tienda para vender todos los productos relaccionados con este deporte.'
 
 challenges:
-    1: 'Con una idea de cómo distribuir cada página, el reto fue desarrollar el menú de forma responsive, donde separamos por materiales, y en cada material encontramos un submenú con una serie de subcategorías para ir a ese producto en función de la subcategoría que seleccionemos.'
+    1: 'El reto fue desarrollar el menú, donde separamos por materiales cada material con un submenú con subcategorías para ir al producto en función de lo seleccionado.'
 
 features:
     1: 'Pedidos online'
     2: 'Diferentes opciones de pago'
-    3: 'Base de datos de usuarios e historial de pedidos'
-    4: 'Secciones de diferentes productos con filtros de selección'
+    3: 'Base de datos de usuarios y pedidos'
+    4: 'Secciones con filtros de selección'
 
 technologies: [
     'figma',

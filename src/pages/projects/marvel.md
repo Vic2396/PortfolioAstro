@@ -8,7 +8,7 @@ image:
 
 github: 'https://github.com/Vic2396/practicaAngular2'
 
-description: 'Marvel API es una práctica realizada entre compañeros de clase, donde hemos puesto a prueba nuestra visión de diseño a la hora de mostrar héroes de Marvel junto con sus detalles.'
+description: 'Marvel API es una práctica de clase que nos sirve de catálogo de héroes de Marvel junto con sus detalles.'
 
 challenges:
     1: 'El mayor reto fue hacer el dashboard, de forma que quedara un diseño interesante y responsive con los héroes que aparecen de forma aleatoria.'
@@ -18,7 +18,6 @@ features:
     2: 'Buscador de héroes'
     3: 'Listado de héroes por id y nombre'
     4: 'Detalles de héroe'
-    5: 'Listado de comics en los que aparece héroe'
 
 technologies: [
     'vscode', 

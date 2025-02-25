@@ -8,10 +8,10 @@ image:
 
 github: 'https://github.com/Vic2396/ValorantAPI'
 
-description: 'Valorant API es una práctica realizada entre compañeros de clase, donde hemos puesto a prueba nuestra visión de diseño a la hora de mostrar personajes y mapas de Valorant junto con sus detalles.'
+description: 'Valorant API es una práctica realizada entre compañeros de clase que nos sirve de catálogo de personajes y mapas de Valorant junto con sus detalles.'
 
 challenges:
-    1: 'La mayor dificultad con la que me he encontrado es en hacer de forma responsive los tamaños de los personajes, porque quería que en versión móvil apareciese uno y después en función de los tamaños se fuese reajustando y dividiendo la pantalla en personajes.'
+    1: 'La mayor dificultad fue hacer de forma responsive los tamaños de los personajes, para qué en versión móvil apareciese uno y después en función de tamaños se fuese reajustando y dividiendo la pantalla en personajes.'
 
 features:
     1: 'Listado de personajes'
