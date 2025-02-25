@@ -1,11 +1,20 @@
 ---
-const { year } = Astro.props
+const { year, current = false } = Astro.props
 ---
 
 <div class="flex flex-row gap-1 h-full">
-    <p class="w-10 font-bold text-center">{ year }</p>
+    { current ? 
+        <p class="w-10 font-bold text-center">{ year }</p> :
+        <p class="w-10 font-bold text-center text-gray-600 dark:text-gray-400">{ year }</p>
+    }
     <div class="h-full flex flex-col items-center">
-        <div class="w-2 h-2 rounded-full bg-black dark:bg-white"></div>
-        <div class="h-full w-0.5 bg-black dark:bg-white"></div>
+        { current ? 
+            <div class="w-2 h-2 rounded-full bg-black dark:bg-white"></div> : 
+            <div class="w-2 h-2 rounded-full bg-gray-500"></div>
+        }
+        { current ? 
+            <div class="h-full w-0.5 bg-black dark:bg-white"></div></div> : 
+            <div class="h-full w-0.5 bg-gray-400"></div></div>
+        }
     </div>
 </div>

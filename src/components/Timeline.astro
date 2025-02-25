@@ -21,12 +21,12 @@ const { events }: { events: Year[] } = Astro.props as { events: Year[] }
 ---
 
 <div class="grid gap-1 overflow-auto pr-3 lg:flex-grow lg:max-h-full">
-    {events.map(({ year, months }) => (
+    {events.map(( data, index ) => (
         <div class="flex flex-row gap-2">
-            <Year year={ year } />
+            <Year year={ data.year } current={ index === 0 ? true : false } />
 
             <div class="flex flex-col gap-4 pb-2 sm:pb-5 lg:pb-8">
-                {months.map(({ month, events }) => (
+                {data.months.map(({ month, events }) => (
                     <div class="grid grid-cols-[40px_auto] gap-2">
                         <Month month={ month } />
 
