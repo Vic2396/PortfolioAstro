@@ -7,6 +7,7 @@ image:
     src: '/projects/vegaPadel.svg'
 
 github: 'https://github.com/Vic2396/VegaPadel'
+githubPages: 'https://vic2396.github.io/VegaPadel/'
 
 description: 'Vega Pádel es un club de pádel que a la vez tiene tienda para vender todos los productos relaccionados con este deporte.'
 

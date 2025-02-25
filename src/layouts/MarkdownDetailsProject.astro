@@ -77,19 +77,34 @@ const { frontmatter } = Astro.props
         }
       </div>
 
-      { frontmatter.github && 
-        <a href={ frontmatter.github } 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          class="absolute -top-2 sm:top-0 right-2 inline-flex items-center justify-center p-2 sm:p-0 sm:py-1 sm:px-2 text-white bg-slate-800 
-                rounded-full shadow-lg transition duration-300 hover:bg-gray-700 focus:outline-none dark:bg-gray-700
-                focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 hover:dark:bg-gray-800">
-            <svg class="w-6 h-6 sm:mr-3" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.54 5.47 7.61.4.07.55-.17.55-.37 0-.19-.01-.73-.01-1.41-2.22.48-2.68-.64-2.68-.64-.36-.92-.88-1.17-.88-1.17-.72-.49.05-.48.05-.48.8.06 1.23.84 1.23.84.71 1.22 1.87.87 2.32.67.07-.53.28-.87.51-1.07-1.77-.2-3.63-.89-3.63-3.95 0-.87.31-1.58.83-2.13-.08-.2-.36-.99-.14-2.04 0 0 .67-.21 2.19.83.64-.18 1.31-.27 1.98-.27s1.34.1 1.98.27c1.52-1.04 2.19-.83 2.19-.83.22 1.05-.06 1.84-.14 2.04.52.55.83 1.26.83 2.13 0 3.07-1.86 3.75-3.64 3.95.29.25.55.74.55 1.49 0 1.07-.01 1.94-.01 2.21 0 .2.15.45.55.37C13.71 14.54 16 11.54 16 8c0-4.42-3.58-8-8-8z"/>
-            </svg>
-            <span class="hidden sm:inline font-title tracking-widest text-sm md:text-lg">Ir al Repositorio</span>
-        </a>
-      }
+      <div class="absolute -top-2 sm:top-0 right-2 flex flex-col gap-3">
+        { frontmatter.github && 
+          <a href={ frontmatter.github } 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="flex flex-row items-center justify-center sm:justify-start p-2 sm:p-0 sm:py-1 sm:px-2 text-white bg-slate-800 
+                  rounded-full shadow-lg transition duration-300 hover:bg-gray-700 focus:outline-none dark:bg-gray-700
+                  focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 hover:dark:bg-gray-800">
+              <svg class="w-6 h-6 sm:mr-3" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.54 5.47 7.61.4.07.55-.17.55-.37 0-.19-.01-.73-.01-1.41-2.22.48-2.68-.64-2.68-.64-.36-.92-.88-1.17-.88-1.17-.72-.49.05-.48.05-.48.8.06 1.23.84 1.23.84.71 1.22 1.87.87 2.32.67.07-.53.28-.87.51-1.07-1.77-.2-3.63-.89-3.63-3.95 0-.87.31-1.58.83-2.13-.08-.2-.36-.99-.14-2.04 0 0 .67-.21 2.19.83.64-.18 1.31-.27 1.98-.27s1.34.1 1.98.27c1.52-1.04 2.19-.83 2.19-.83.22 1.05-.06 1.84-.14 2.04.52.55.83 1.26.83 2.13 0 3.07-1.86 3.75-3.64 3.95.29.25.55.74.55 1.49 0 1.07-.01 1.94-.01 2.21 0 .2.15.45.55.37C13.71 14.54 16 11.54 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              <span class="hidden w-full text-center sm:inline font-title tracking-widest text-sm md:text-lg">Ir al Repositorio</span>
+          </a>
+        }
+        { frontmatter.githubPages && 
+          <a href={ frontmatter.githubPages } 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="flex flex-row items-center justify-center sm:justify-start p-2 sm:p-0 sm:py-1 sm:px-2 text-white bg-slate-800 
+                  rounded-full shadow-lg transition duration-300 hover:bg-gray-700 focus:outline-none dark:bg-gray-700
+                  focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 hover:dark:bg-gray-800">
+              <svg class="w-6 h-6 sm:mr-3" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 576 512">
+                <path d="M572.52 241.4C518.88 135.06 410.47 64 288 64S57.12 135.06 3.48 241.4a32.35 32.35 0 000 29.2C57.12 376.94 165.53 448 288 448s230.88-71.06 284.52-177.4a32.35 32.35 0 000-29.2zM288 400c-99.72 0-189.26-52.93-237.4-136C98.74 180.93 188.28 128 288 128s189.26 52.93 237.4 136c-48.14 83.07-137.68 136-237.4 136zm0-240a104 104 0 10104 104 104.12 104.12 0 00-104-104zm0 176a72 72 0 1172-72 72.08 72.08 0 01-72 72z"/>
+              </svg>
+              <span class="hidden w-full text-center sm:inline font-title tracking-widest text-sm md:text-lg">Ver preview</span>
+          </a>
+        }
+      </div>
     </section>
   </div>
 </BaseLayout>

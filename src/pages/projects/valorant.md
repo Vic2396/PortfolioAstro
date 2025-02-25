@@ -7,6 +7,7 @@ image:
     src: '/projects/valorant-animated.svg'
 
 github: 'https://github.com/Vic2396/ValorantAPI'
+githubPages: 'https://vic2396.github.io/ValorantAPI/'
 
 description: 'Valorant API es una práctica realizada entre compañeros de clase que nos sirve de catálogo de personajes y mapas de Valorant junto con sus detalles.'
 
