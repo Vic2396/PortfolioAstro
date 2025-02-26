@@ -1,14 +1,15 @@
 ---
 import { Image } from 'astro:assets'
 
-const { cardTitle, img, url } = Astro.props
+const { cardTitle, img, url, bg } = Astro.props
 ---
 
-<a href={ url } class="relative grid h-40 md:h-56 justify-items-center items-center bg-slate-700 dark:bg-slate-950 rounded 
+<a href={ url } class="relative grid h-40 md:h-56 justify-items-center items-center bg-blend-overlay bg-no-repeat bg-cover bg-slate-700 rounded-sm 
                         shadow hover:shadow-lime-400 hover:dark:shadow-teal-400 lg:hover:scale-105 hover:z-30 transition-all 
-                        duration-200 ease-in-out overflow-hidden">
+                        duration-200 ease-in-out overflow-hidden opacity-75 hover:opacity-100" 
+                        style={`background-image: url(${bg})`}>
     
-    <h2 class="absolute top-0 w-full h-max font-title tracking-widest dark:text-white bg-lime-400 dark:bg-slate-600 text-center">
+    <h2 class="absolute top-2 w-1/2 h-max font-title tracking-widest dark:text-white bg-lime-400 dark:bg-slate-600 text-center opacity-75">
         { cardTitle }
     </h2>
     <Image src={ img } alt={ cardTitle } width=200 height=200 class="w-auto h-2/3" />

@@ -5,6 +5,8 @@ title: 'DSC Barber'
 
 image:
     src: '/projects/DSC.png'
+bg: 
+    src: '/projects/peluqueria.jpg'
 
 description: 'DSC Barber es el proyecto de un amigo que a parte de servicio de barbería, también vende camisetas y sudaderas con sus logos.'
 

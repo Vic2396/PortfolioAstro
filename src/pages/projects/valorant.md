@@ -5,6 +5,8 @@ title: 'Valorant API'
 
 image:
     src: '/projects/valorant-animated.svg'
+bg: 
+    src: '/projects/valorant-bg.webp'
 
 github: 'https://github.com/Vic2396/ValorantAPI'
 githubPages: 'https://vic2396.github.io/ValorantAPI/'

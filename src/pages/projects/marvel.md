@@ -5,6 +5,8 @@ title: 'Marvel API'
 
 image:
     src: '/projects/marvel-comics.png'
+bg: 
+    src: '/projects/marvel-cartel.webp'
 
 github: 'https://github.com/Vic2396/practicaAngular2'
 

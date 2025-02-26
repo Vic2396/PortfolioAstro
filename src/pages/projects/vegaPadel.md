@@ -5,6 +5,8 @@ title: 'Vega Pádel'
 
 image: 
     src: '/projects/vegaPadel.svg'
+bg: 
+    src: '/projects/padel.jpg'
 
 github: 'https://github.com/Vic2396/VegaPadel'
 githubPages: 'https://vic2396.github.io/VegaPadel/'

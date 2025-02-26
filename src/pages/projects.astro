@@ -11,7 +11,7 @@ const pageTitle = "Mis proyectos"
         <h1 class="text-xl md:text-2xl 2xl:text-3xl text-center font-title tracking-widest">Estos son los proyectos que tengo desarrollados hasta el momento</h1>
         <div class="w-full max-w-6xl grid gap-4 grid-cols-1 md:grid-cols-2">
             {allProjects.map((project) => 
-                <Card url={ project.url } cardTitle={ project.frontmatter.title } img={ project.frontmatter.image.src } />
+                <Card url={ project.url } cardTitle={ project.frontmatter.title } img={ project.frontmatter.image.src } bg={ project.frontmatter.bg.src } />
             )}
         </div>
     </section>
