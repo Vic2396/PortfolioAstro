@@ -158,5 +158,21 @@ const skills = [
                 ))}
             </div>
         </SectionAboutMeLayout>
+
+        <SectionAboutMeLayout title={ titles[2] } className="row-span-1">
+            <div class="w-full grid grid-cols-2 grid-rows-2 gap-2 items-center">
+                {skills.map((skill) => (
+                    <Skill name={ skill } />
+                ))}
+            </div>
+        </SectionAboutMeLayout>
+
+        <SectionAboutMeLayout title={ titles[2] } className="row-span-1">
+            <div class="w-full grid grid-cols-2 grid-rows-2 gap-2 items-center">
+                {skills.map((skill) => (
+                    <Skill name={ skill } />
+                ))}
+            </div>
+        </SectionAboutMeLayout>
     </div>
 </BaseLayout>

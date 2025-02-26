@@ -1,33 +1,46 @@
 ---
 import Social from './Social.astro'
-import x from '../images/social/x.svg'
-import github from '../images/social/github.svg'
-import youtube from '../images/social/youtube.svg'
-import instagram from '../images/social/instagram-color.svg'
-import telegram from '../images/social/telegram.svg'
-import linkedin from '../images/social/linkedin-black.svg'
-import discord from '../images/social/icons8-discord.svg'
 
 const platforms = {
-    x,
-    github,
-    youtube,
-    instagram,
-    telegram,
-    linkedin,
-    discord
+    x: 'bi bi-twitter-x',
+    youtube: 'bi bi-youtube',
+    instagram: 'bi bi-instagram',
+    linkedin: 'bi bi-linkedin',
+    discord: 'bi bi-discord',
 }
+const chanels = [
+    {
+    name: "x",
+    img: platforms.x,
+    link: "https://twitter.com/Sr_Mora23"
+  },
+  {
+    name: "youtube",
+    img: platforms.youtube,
+    link: "https://www.youtube.com/@VicMR23"
+  },
+  {
+    name: "instagram",
+    img: platforms.instagram,
+    link: "https://www.instagram.com/vic_mora23"
+  },
+  {
+    name: "linkedin",
+    img: platforms.linkedin,
+    link: "https://www.linkedin.com/in/víctor-mora-rosique/"
+  },
+  {
+    name: "discord",
+    img: platforms.discord,
+    link: "https://discord.com/users/0424"
+  }
+]
 ---
 
-<footer class="p-1 flex-shrink-0 w-full flex gap-5 justify-center bg-slate-700 dark:bg-slate-950 
+<footer class="p-1 w-full h-max flex flex-row gap-6 justify-center bg-slate-700 dark:bg-slate-950 
                 shadow-footer dark:shadow-footerDark">
-    <p class="text-white font-title tracking-widest">V&iacute;ctor Mora © 2025 </p>
-</footer>
-<!-- Footer 
-<footer class="p-2 flex-shrink-0 w-full flex gap-5 justify-center bg-slate-700 dark:bg-slate-950 
-                shadow-footer dark:shadow-footerDark">
-    {Object.entries(platforms).map(([name, src]) => (
-        <Social platform={ name } src={ src } />
+                
+    {chanels.map(({ name, img, link }) => (
+        <Social platform={ name } src={ img } link={ link } />
     ))}
 </footer>
--->
