@@ -4,9 +4,11 @@ layout: ../../layouts/MarkdownDetailsProject.astro
 title: 'Vega Pádel'
 
 image: 
-    src: '/projects/vegaPadel.svg'
+    src: '/vegaPadel/logo.svg'
 bg: 
-    src: '/projects/padel.jpg'
+    src: '/vegaPadel/bg.svg'
+bgPage:
+    src: '/vegaPadel/bg.svg'
 
 github: 'https://github.com/Vic2396/VegaPadel'
 githubPages: 'https://vic2396.github.io/VegaPadel/'

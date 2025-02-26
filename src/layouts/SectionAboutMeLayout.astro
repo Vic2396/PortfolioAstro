@@ -4,7 +4,8 @@ import Title from '../components/Title.astro';
 const { title, className } = Astro.props;
 ---
 
-<section class={`h-full w-full px-1 py-3 flex flex-col gap-4 items-center ${className} font-text rounded bg-gray-300 dark:bg-slate-900 shadow-black dark:shadow-white shadow-md`}>
+<section class={`h-full w-full px-1 py-3 flex flex-col gap-4 items-center ${className} font-text rounded
+             bg-gray-300 dark:bg-slate-900 shadow-black dark:shadow-white shadow-md`}>
     <Title name={ title } />
     <slot />
 </section>

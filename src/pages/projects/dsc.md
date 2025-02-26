@@ -4,9 +4,11 @@ layout: ../../layouts/MarkdownDetailsProject.astro
 title: 'DSC Barber'
 
 image:
-    src: '/projects/DSC.png'
+    src: '/dsc/logo.png'
 bg: 
-    src: '/projects/peluqueria.jpg'
+    src: '/dsc/bg.jpg'
+bgPage:
+    src: '/dsc/bg.svg'
 
 description: 'DSC Barber es el proyecto de un amigo que a parte de servicio de barbería, también vende camisetas y sudaderas con sus logos.'
 

@@ -4,9 +4,10 @@ import Card from '../components/Card.astro'
 
 const allProjects = await Astro.glob('../pages/projects/*.md')
 const pageTitle = "Mis proyectos"
+const bg = '/bg-projects.webp'
 ---
 
-<BaseLayout pageTitle={ pageTitle }>
+<BaseLayout pageTitle={ pageTitle } bg={ bg }>
     <section class="flex flex-col items-center gap-5 md:gap-10">
         <h1 class="text-xl md:text-2xl 2xl:text-3xl text-center font-title tracking-widest">Estos son los proyectos que tengo desarrollados hasta el momento</h1>
         <div class="w-full max-w-6xl grid gap-4 grid-cols-1 md:grid-cols-2">

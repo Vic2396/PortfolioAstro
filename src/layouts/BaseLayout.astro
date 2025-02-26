@@ -3,7 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
-const { pageTitle } = Astro.props;
+const { pageTitle, bg } = Astro.props;
 ---
 
 <html lang="en">
@@ -18,8 +18,9 @@ const { pageTitle } = Astro.props;
   </head>
   <body class="h-dvh flex flex-col bg-gradient-to-b from-violet-200 via-gray-100 to-slate-600 dark:bg-gradient-to-b dark:from-zinc-950 dark:via-gray-700 dark:to-slate-500">
     <Header />
-    <main class="flex-grow text-black dark:text-white 
-                pt-24 lg:pt-20 px-3 xl:px-32 2xl:px-40 pb-4 flex flex-col items-center gap-10 overflow-auto">
+    <main class=`flex-grow text-black dark:text-white backdrop-blur-lg
+                pt-24 lg:pt-20 px-3 xl:px-32 2xl:px-40 pb-4 flex flex-col items-center gap-10 overflow-auto bg-blend-overlay bg-no-repeat bg-cover bg-gray-300 dark:bg-slate-900`
+                style={`background-image: url(${bg})`}>
       <slot />
     </main>
     <Footer />

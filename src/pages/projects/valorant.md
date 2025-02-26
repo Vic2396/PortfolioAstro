@@ -4,9 +4,11 @@ layout: ../../layouts/MarkdownDetailsProject.astro
 title: 'Valorant API'
 
 image:
-    src: '/projects/valorant-animated.svg'
+    src: '/valorant/logo.svg'
 bg: 
-    src: '/projects/valorant-bg.webp'
+    src: '/valorant/bg.webp'
+landing:
+    src: '/projects/valorantAPI.png'
 
 github: 'https://github.com/Vic2396/ValorantAPI'
 githubPages: 'https://vic2396.github.io/ValorantAPI/'

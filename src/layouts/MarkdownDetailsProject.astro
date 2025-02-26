@@ -22,15 +22,15 @@ const technologies = {
 const { frontmatter } = Astro.props
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
-  <div class="relative w-full max-w-6xl p-2 2xl:p-4  flex flex-col gap-8 items-center">
+<BaseLayout pageTitle={frontmatter.title} bg={frontmatter.bg.src}>
+  <div class=`relative w-full max-w-6xl p-2 2xl:p-4 flex flex-col gap-8 items-center`>
     <button onclick="history.back()" class="font-title z-10 tracking-widest text-sm md:text-lg px-2 py-1 rounded-2xl absolute top-2 left-2 2xl:top-4 2xl:left-4 cursor-pointer
                                            bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-700  transition duration-300 shadow-lg">
       Volver
     </button>
 
     <section class="relative w-full grid grid-cols-1 justify-items-center items-center gap-4 text-justify">
-      <h1 class="2xl:col-span-2 font-title tracking-widest text-xl md:text-2xl">
+      <h1 class="2xl:col-span-2 font-title tracking-widest text-xl md:text-2xl px-2 py-1 rounded bg-slate-200 dark:bg-slate-900 shadow shadow-black">
         { frontmatter.title }
       </h1>
 
