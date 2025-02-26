@@ -4,9 +4,9 @@ layout: ../../layouts/MarkdownDetailsProject.astro
 title: 'Marvel API'
 
 image:
-    src: '/marvel/logo.png'
+    src: '/projects/marvel/logo.png'
 bg: 
-    src: '/marvel/bg.webp'
+    src: '/projects/marvel/bg.webp'
 
 github: 'https://github.com/Vic2396/practicaAngular2'
 

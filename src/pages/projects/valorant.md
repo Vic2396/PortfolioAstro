@@ -4,9 +4,9 @@ layout: ../../layouts/MarkdownDetailsProject.astro
 title: 'Valorant API'
 
 image:
-    src: '/valorant/logo.svg'
+    src: '/projects/valorant/logo.svg'
 bg: 
-    src: '/valorant/bg.webp'
+    src: '/projects/valorant/bg.webp'
 landing:
     src: '/projects/valorantAPI.png'
 
