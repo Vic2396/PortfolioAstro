@@ -16,10 +16,9 @@ const bg = './bg-espacio.jpg'
     <title>{pageTitle}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   </head>
-  <body class=`h-dvh flex flex-col overflow-hidden bg-blend-overlay bg-no-repeat bg-cover bg-slate-300 dark:bg-slate-900` style={`background-image: url(${bg})`}>
+  <body class=`min-h-dvh flex flex-col bg-blend-overlay bg-no-repeat bg-cover bg-fixed bg-slate-300 dark:bg-slate-900` style={`background-image: url(${bg})`}>
     <Header />
-    <main class=`flex-1 text-black dark:text-white pt-5 lg:pt-20 px-3 xl:px-32 2xl:px-40 pb-4 grid items-center gap-10
-                overflow-auto`>
+    <main class=`flex-1 text-black dark:text-white px-3 xl:px-32 2xl:px-40 pb-4 grid grid-cols-1 grid-rows-[1fr_auto] items-center gap-10`>
       <slot />
     </main>
     <Footer />

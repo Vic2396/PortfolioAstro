@@ -1,0 +1,9 @@
+---
+import { Image } from 'astro:assets'
+
+const { src, name } = Astro.props
+---
+
+<div class="p-1 flex w-14 h-14">
+    <Image src={ src } alt={ name } class="object-contain" />
+</div>
