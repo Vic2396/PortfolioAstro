@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.getElementById("toggle-menu");
+    const toggleButton = document.querySelector("#toggle-menu");
     const link = document.getElementsByClassName("links");
-    const menu = document.getElementById("dropdown-menu");
+    const menu = document.querySelector("#dropdown-menu");
 
     toggleButton?.addEventListener("click", () => {
       if (menu?.classList.contains("max-h-0")) {
