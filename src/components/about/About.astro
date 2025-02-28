@@ -20,95 +20,69 @@ import Git from '../../images/skills/github-color.svg'
 import Ubuntu from '../../images/skills/ubuntu.svg'
 import Vstudio from '../../images/skills/vstudio.svg'
 
-const pageTitle = "Sobre mí"
 const titles = [
-    "Cronología",
-    "Habilidades",
+    "Experiencias",
+    "Tecnologías",
     "Aptitudes",
-    "Idiomas"
 ]
+
 const data = [
     {
-        year: "2025",
-        months: [
-            {
-                month: "Sep",
-                events: [
-                    "Empiezo en DXC Technology en la sección de backend"
-                ]
-            },
-            {
-                month: "Jun",
-                events: [
-                    "Termino los estudios de Técnico Superior en Desarrollo de Aplicaciones Web"
-                ]
-            }
+        event: "Técnico Superior en Desarrollo de Aplicaciones Web",
+        place: "EFA El Campico (Jacarilla)",
+        time: [
+            "Sep 2023 - Jun 2025",
+            ],
+        tasks: [
+            "Desarrollo Full-Stack",
+            "Bases de datos en MySQL y MariaDB",
+            "Servicios API REST",
+            "Despliegue de aplicaciones en Docker",
+            "Diseño de aplicaciones en Figma, CSS, SASS y Tailwind"
         ]
     },
     {
-        year: "2024",
-        months: [
-            {
-                month: "May",
-                events: [
-                    "Dejo mi trabajo como programador industrial en Electrosegura"
-                ]
-            }
+        event: "Programador industrial",
+        place: "Electrosegura (Orihuela)",
+        time: [
+            "Feb 2023 - May 2024",
+            "Jun 2020 - Sep 2020"
+            ],
+        tasks: [
+            "PLCs y variadores Omron, Siemens y Mitsubishi",
+            "Esquemas eléctricos",
+            "Pantallas HMI con Weintek",
+            "Manuales de usuario",
+            "Cuadros eléctricos y puesta en marcha"
         ]
     },
     {
-        year: "2023",
-        months: [
-            {
-                month: "Sep",
-                events: [
-                    "Empiezo los estudios de Técnico Superior en Desarrollo de Aplicaciones Web"
-                ]
-            },
-            {
-                month: "Feb",
-                events: [
-                    "Empiezo como programador industrial en Electrosegura",
-                    "Dejo mi trabajo como programador industrial en Elmec Torres"
-                ]
-            }
+        event: "Programador industrial",
+        place: "Elmec Torres (Elche)",
+        time: [
+            "Jul 2021 - Feb 2023",
+            ],
+        tasks: [
+            "PLCs y variadores Unitronics y Eura",
+            "Esquemas eléctricos",
+            "Manuales de usuario",
+            "Cuadros eléctricos y puesta en marcha"
         ]
     },
     {
-        year: "2021",
-        months: [
-            {
-                month: "Jul",
-                events: [
-                    "Empiezo como programador industrial en Elmec Torres"
-                ]
-            }
-        ]
-    },
-    {
-        year: "2020",
-        months: [
-            {
-                month: "Jun",
-                events: [
-                    "Termino los estudios de Técnico Superior en Automatización y Robótica Industrial"
-                ]
-            }
-        ]
-    },
-    {
-        year: "2018",
-        months: [
-            {
-                month: "Sept",
-                events: [
-                    "Empiezo los estudios de Técnico Superior en Automatización y Robótica Industrial"
-                ]
-            }
+        event: "Técnico Superior en Automatización y Robótica Industrial",
+        place: "IES Azud de Alfeitamí (Almoradí)",
+        time: [
+            "Sep 2018 - Jun 2020",
+            ],
+        tasks: [
+            "PLCs Omron y Siemens",
+            "Esquemas eléctricos en See Electrical",
+            "Pantallas HMI y SCADA en WinCC, TiaPortal y CX-Supervisor"
         ]
     },
 ]
-const habilities = { 
+const habilities2 = { 
     HTML, 
     CSS,
     Tailwind,
@@ -125,35 +99,50 @@ const habilities = {
     Ubuntu,
     Vstudio
 }
+const habilities = {
+    HTML: 'si si-html5',
+    CSS: 'si si-css3',
+    Tailwind: 'si si-tailwindcss',
+    Figma: 'si si-figma',
+    JavaScript: 'si si-javascript',
+    TypeScript: 'si si-typescript',
+    Angular: 'si si-angular',
+    Astro: 'si si-astro',
+    Laravel: 'si si-laravel',
+    MySQL: 'si si-mysql',
+    MariaDB: 'si si-mariadb',
+    Docker: 'si si-docker',
+    Git: 'si si-git',
+    Postman: 'si si-postman',
+    Vstudio: 'si si-visualstudiocode'
+}
 const skills = [
-    "Trabajar en equipo",
+    "Dinámico",
     "Proactivo",
     "Responsable",
-    "Ordenado"
+    "Trabajo en equipo"
 ]
 ---
 
-<div id="about" class="h-dvh pt-32 sm:pt-20 grid gap-5 content-arround grid-cols-1 grid-rows-4 lg:px-20 md:grid-cols-3">
-    <SectionAboutMeLayout title={ titles[0] } className="row-span-2 md:row-span-4 md:col-span-2">
-        <Timeline events={ data } />
-    </SectionAboutMeLayout>
-
-    <SectionAboutMeLayout title={ titles[1] } className="row-span-1 md:row-span-3">
-        <div class="w-full grid grid-flow-col gap-4 pb-3 overflow-auto md:pb-0 md:grid-cols-2 lg:grid-cols-3 md:grid-flow-row justify-items-center">
+<div id="about" class="pt-24 sm:pt-20 grid content-arround grid-cols-1 sm:grid-cols-2 sm:gap-4">
+    <SectionAboutMeLayout title={ titles[1] } className="bg-white/60 dark:bg-slate-800/60">
+        <div class="w-full grid grid-cols-5 grid-rows-3 gap-3 justify-between">
             {Object.entries(habilities).map(([name, src]) => (
-                <div>
-                    <Hability name={ name } src={ src } />
-                </div>
+                <Hability name={ name } src={ src } />
             ))}
         </div>
     </SectionAboutMeLayout>
 
-    <SectionAboutMeLayout title={ titles[2] } className="row-span-1">
-        <div class="w-full grid grid-cols-2 grid-rows-2 gap-2 items-center">
+    <SectionAboutMeLayout title={ titles[2] } className="bg-gray-300/60 dark:bg-slate-600/60">
+        <div class="w-full h-full grid grid-cols-2 grid-rows-2 sm:grid-cols-1 sm:grid-rows-4 gap-2 items-center">
             {skills.map((skill) => (
                 <Skill name={ skill } />
             ))}
         </div>
+    </SectionAboutMeLayout>
+
+    <SectionAboutMeLayout title={ titles[0] } className="bg-white/60 dark:bg-slate-900/60 sm:col-span-2">
+        <Timeline events={ data } />
     </SectionAboutMeLayout>
 </div>
 
