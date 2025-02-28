@@ -3,7 +3,7 @@ const { text, type = "column", reverse = false, cursorHover = "cursor-auto", cla
 const flexDirection = type === "row" ? "flex-row items-center" : "flex-col"
 ---
 
-<label class=`${className} flex ${flexDirection} gap-2 text-black dark:text-white font-bold ${cursorHover}`>
+<label class=`${className} flex ${flexDirection} gap-2 ${cursorHover}`>
     { reverse ? <slot /> : text }
     { reverse ? text : <slot />}
 </label>

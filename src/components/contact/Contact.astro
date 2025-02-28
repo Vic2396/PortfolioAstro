@@ -1,0 +1,59 @@
+---
+import Title from "../Title.astro"
+import Input from "./Input.astro"
+import Option from "./OptionRadio.astro"
+import Label from "./Label.astro"
+
+const titleSection = "Contacto"
+---
+
+<section id="contact" class="pt-28 sm:pt-20 px-4 pb-10 grid grid-cols-1 grid-rows-[auto_1fr] gap-4 justify-items-center sm:rounded 
+                             bg-sky-200/30 dark:bg-black/30 font-title tracking-widest">
+    <Title name={ titleSection } />
+
+    <form id="formContact" action="" class="grid gap-4 text-lg">
+        <fieldset class="grid gap-4 md:gap-10 md:grid-cols-2">
+            <Label text="Nombre" className="md:col-span-2 relative">
+                <Input type="text" name="nombre" />
+                <p id="error-nombre" class="absolute top-10 right-4 text-red-600"></p>
+            </Label>
+    
+            <Label text="Teléfono" className="relative">
+                <Input type="tel" name="tel" />
+                <p id="error-telefono" class="absolute top-10 right-4 text-red-600"></p>
+            </Label>
+    
+            <Label text="Email" className="relative">
+                <Input type="email" name="email" />
+                <p id="error-email" class="absolute top-10 right-4 text-red-600"></p>
+            </Label>
+    
+            <Label text="Cómo prefieres que contacte contigo" className="md:col-span-2">
+                <div class="flex flex-row gap-10">
+                    <Label text="Teléfono" type="row" reverse={true} cursorHover="cursor-pointer">
+                        <Option name="preferencia" value="teléfono" />
+                    </Label>
+    
+                    <Label text="Email" type="row" reverse={true} cursorHover="cursor-pointer">
+                        <Option name="preferencia" value="email" />
+                    </Label>
+                </div>
+            </Label>
+    
+            <Label text="Motivo de contacto" className="md:col-span-2">
+                <textarea name="motivo" id="motivo" maxlength="400" placeholder="Indique aquí su motivo de contacto" 
+                        class="resize-none h-28 bg-white/60 dark:bg-gray-600/60 rounded p-2 focus:outline-2
+                             focus:outline-slate-500 dark:focus:outline-slate-100 focus:ring-0 
+                             placeholder:font-medium placeholder:text-sm text-slate-700 dark:text-slate-300" />
+            </Label>
+        </fieldset>
+    
+        <button class="p-2 rounded text-white bg-slate-800 hover:bg-lime-400 dark:hover:bg-teal-400
+                     hover:text-black dark:bg-slate-700 dark:active:bg-slate-600 cursor-pointer
+                     active:bg-slate-700 transition-all duration-300 ease-in-out">
+            Enviar
+        </button>
+    </form>
+</section>
+
+<script src="../../scripts/validacionesForm.js"></script>
