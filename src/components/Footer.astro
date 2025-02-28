@@ -37,10 +37,17 @@ const chanels = [
 ]
 ---
 
-<footer class="p-1 w-full flex flex-row gap-6 justify-center bg-slate-700 dark:bg-slate-950 
+<footer class="p-2 w-full flex flex-col gap-0 items-center justify-center bg-slate-700 dark:bg-slate-950 
                 shadow-footer dark:shadow-footerDark">
-                
-    {chanels.map(({ name, img, link }) => (
+    <p class="font-title tracking-widest text-gray-100 dark:text-white">
+      S&iacute;gueme en redes
+    </p>
+
+    <span class="font-title tracking-widest text-gray-100 dark:text-white">·</span>
+    
+    <div class="flex flex-row gap-6 justify-center">
+      {chanels.map(({ name, img, link }) => (
         <Social platform={ name } src={ img } link={ link } />
-    ))}
+      ))}
+    </div>
 </footer>
