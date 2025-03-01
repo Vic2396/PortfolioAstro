@@ -22,10 +22,9 @@ features:
     4: 'Detalles de héroe'
 
 technologies: [
-    'vscode', 
     'angular', 
     'tailwind', 
     'typescript',
-    'github'
+    'git'
     ]
 ---

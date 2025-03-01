@@ -1,7 +1,9 @@
 ---
-const { name } = Astro.props
+import { Image } from 'astro:assets'
+
+const { src, name } = Astro.props
 ---
 
-<span class="h-full grid items-center justify-center sm:text-2xl font-extrabold py-1 px-2 rounded bg-white/40 dark:bg-slate-800/70">
-    { name }
-</span>
+<div class="p-1.5 grid justify-center">
+    <Image src={ src } alt={ name } width=50 height=50 class="w-10 h-10 xl:w-14 xl:h-14 p-1 rounded bg-slate-500/30 dark:bg-slate-300" />
+</div>

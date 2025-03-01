@@ -9,17 +9,17 @@ const technologies = {
   'astro': '/technologies/astro.svg',
   'docker': '/technologies/docker.svg',
   'figma': '/technologies/figma.svg',
-  'github': '/technologies/github-color.svg',
-  'html': '/technologies/html.svg',
-  'java': '/technologies/java.svg',
-  'javascript': '/technologies/js.svg',
+  'git': '/technologies/git.svg',
+  'html': '/technologies/html5.svg',
+  'javascript': '/technologies/javascript.svg',
   'laravel': '/technologies/laravel.svg',
-  'css': '/technologies/logo-css.avif',
+  'eclipse': '/technologies/eclipseide.svg',
+  'css': '/technologies/css.svg',
   'mysql': '/technologies/mysql.svg',
-  'tailwind': '/technologies/tailwind-green.svg',
+  'mariadb': '/technologies/mariadb.svg',
+  'tailwind': '/technologies/tailwindcss.svg',
   'typescript': '/technologies/typescript.svg',
   'ubuntu': '/technologies/ubuntu.svg',
-  'vscode': '/technologies/vscode.svg',
 }
 const titles = [
   "¿Cuál ha sido el desafío?",
@@ -99,11 +99,11 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
 
         { frontmatter.technologies && 
           <SectionProjectLayout title={ titles[2] } className="bg-gray-300/60 dark:bg-slate-600/60">
-            <ul class="w-full grid grid-cols-4 gap-4 justify-between">
+            <ul class="w-full h-full grid grid-cols-4 gap-4 justify-between items-center">
               { frontmatter.technologies.map((technology: keyof typeof technologies) => (
                 technologies[technology] ? (
                   <li class="grid justify-center">
-                    <Image src={ technologies[technology] } alt={ technology } width=50 height=50 class="w-10 h-10 xl:w-12 xl:h-12" />
+                    <Image src={ technologies[technology] } alt={ technology } width=50 height=50 class="w-10 h-10 xl:w-14 xl:h-14 p-1 rounded bg-slate-500/30 dark:bg-slate-300" />
                   </li>
                 ) : (
                   <li>{ technology }</li>

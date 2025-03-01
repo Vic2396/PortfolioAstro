@@ -4,28 +4,11 @@ import Timeline from './Timeline.astro'
 import Hability from './Hability.astro'
 import Skill from './Skill.astro'
 
-import HTML from '../../images/skills/html.svg'
-import CSS from '../../images/skills/logo-css.avif'
-import Tailwind from '../../images/skills/tailwind-green.svg'
-import Figma from '../../images/skills/figma.svg'
-import Java from '../../images/skills/java.svg'
-import JS from '../../images/skills/js.svg'
-import TP from '../../images/skills/typescript.svg'
-import Angular from '../../images/skills/angular.svg'
-import Astros from '../../images/skills/astro.svg'
-import Laravel from '../../images/skills/laravel.svg'
-import MySQL from '../../images/skills/mysql.svg'
-import Docker from '../../images/skills/docker.svg'
-import Git from '../../images/skills/github-color.svg'
-import Ubuntu from '../../images/skills/ubuntu.svg'
-import Vstudio from '../../images/skills/vstudio.svg'
-
 const titles = [
     "Experiencias",
     "Tecnologías",
     "Aptitudes",
 ]
-
 const data = [
     {
         event: "Técnico Superior en Desarrollo de Aplicaciones Web",
@@ -82,41 +65,25 @@ const data = [
         ]
     },
 ]
-const habilities2 = { 
-    HTML, 
-    CSS,
-    Tailwind,
-    Figma, 
-    Java,
-    JS,
-    TP,
-    Angular,
-    Astros,
-    Laravel,
-    MySQL,
-    Docker,
-    Git, 
-    Ubuntu,
-    Vstudio
+
+const technologies = {
+  'angular': '/technologies/angular.svg',
+  'astro': '/technologies/astro.svg',
+  'docker': '/technologies/docker.svg',
+  'figma': '/technologies/figma.svg',
+  'git': '/technologies/git.svg',
+  'html': '/technologies/html5.svg',
+  'javascript': '/technologies/javascript.svg',
+  'laravel': '/technologies/laravel.svg',
+  'eclipse': '/technologies/eclipseide.svg',
+  'css': '/technologies/css.svg',
+  'mysql': '/technologies/mysql.svg',
+  'mariadb': '/technologies/mariadb.svg',
+  'tailwind': '/technologies/tailwindcss.svg',
+  'typescript': '/technologies/typescript.svg',
+  'ubuntu': '/technologies/ubuntu.svg',
 }
-const habilities = {
-    HTML: 'si si-html5',
-    CSS: 'si si-css3',
-    Tailwind: 'si si-tailwindcss',
-    Figma: 'si si-figma',
-    JavaScript: 'si si-javascript',
-    TypeScript: 'si si-typescript',
-    Angular: 'si si-angular',
-    Astro: 'si si-astro',
-    Laravel: 'si si-laravel',
-    MySQL: 'si si-mysql',
-    MariaDB: 'si si-mariadb',
-    Docker: 'si si-docker',
-    Git: 'si si-git',
-    Postman: 'si si-postman',
-    Vstudio: 'si si-visualstudiocode'
-}
-const skills = [
+const habilities = [
     "Dinámico",
     "Proactivo",
     "Responsable",
@@ -127,16 +94,16 @@ const skills = [
 <div id="about" class="pt-24 sm:pt-20 grid content-arround grid-cols-1 sm:grid-cols-2 sm:gap-4">
     <SectionAboutMeLayout title={ titles[1] } className="bg-white/60 dark:bg-slate-800/60">
         <div class="w-full grid grid-cols-5 grid-rows-3 gap-3 justify-between">
-            {Object.entries(habilities).map(([name, src]) => (
-                <Hability name={ name } src={ src } />
+            {Object.entries(technologies).map(([name, src]) => (
+                <Skill name={ name } src={ src } />
             ))}
         </div>
     </SectionAboutMeLayout>
 
     <SectionAboutMeLayout title={ titles[2] } className="bg-gray-300/60 dark:bg-slate-600/60">
         <div class="w-full h-full grid grid-cols-2 grid-rows-2 sm:grid-cols-1 sm:grid-rows-4 gap-2 items-center">
-            {skills.map((skill) => (
-                <Skill name={ skill } />
+            {habilities.map((hability) => (
+                <Hability name={ hability } />
             ))}
         </div>
     </SectionAboutMeLayout>

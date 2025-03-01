@@ -9,7 +9,7 @@ const platforms = {
     discord: 'bi bi-discord',
 }
 const chanels = [
-    {
+  {
     name: "x",
     img: platforms.x,
     link: "https://twitter.com/Sr_Mora23"
@@ -46,8 +46,8 @@ const chanels = [
     <span class="font-title tracking-widest text-gray-100 dark:text-white">·</span>
     
     <div class="flex flex-row gap-6 justify-center">
-      {chanels.map(({ name, img, link }) => (
-        <Social platform={ name } src={ img } link={ link } />
+      {chanels.map(({ img, link }) => (
+        <Social src={ img } link={ link } />
       ))}
     </div>
 </footer>

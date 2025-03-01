@@ -7,8 +7,6 @@ image:
     src: '/projects/vegaPadel/logo.svg'
 bg: 
     src: '/projects/vegaPadel/bg.svg'
-bgPage:
-    src: '/projects/vegaPadel/bg.svg'
 
 github: 'https://github.com/Vic2396/VegaPadel'
 githubPages: 'https://vic2396.github.io/VegaPadel/'
@@ -25,12 +23,11 @@ features:
     4: 'Secciones con filtros de selección'
 
 technologies: [
-    'figma',
-    'vscode', 
+    'figma', 
     'html',
     'css', 
     'tailwind', 
     'javascript',
-    'github'
+    'git'
     ]
 ---

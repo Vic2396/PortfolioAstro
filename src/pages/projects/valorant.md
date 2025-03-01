@@ -7,8 +7,6 @@ image:
     src: '/projects/valorant/logo.svg'
 bg: 
     src: '/projects/valorant/bg.webp'
-landing:
-    src: '/projects/valorantAPI.png'
 
 github: 'https://github.com/Vic2396/ValorantAPI'
 githubPages: 'https://vic2396.github.io/ValorantAPI/'
@@ -25,10 +23,9 @@ features:
 
 technologies: [
     'figma',
-    'vscode', 
     'html', 
     'tailwind', 
     'javascript',
-    'github'
+    'git'
     ]
 ---
