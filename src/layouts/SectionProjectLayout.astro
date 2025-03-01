@@ -1,0 +1,10 @@
+---
+import Title from '../components/Title.astro'
+
+const { title, className } = Astro.props
+---
+
+<section class={`${className} h-full w-full px-4 py-6 flex flex-col gap-4 items-center font-text text-gray-900 dark:text-gray-300 rounded sm:shadow shadow-black`}>
+    <Title name={ title } className="w-72 " />
+    <slot />
+</section>

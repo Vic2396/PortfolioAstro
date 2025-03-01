@@ -1,15 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import Card from '../components/Card.astro'
+import Card from '../components/projects/Card.astro'
 
-const allProjects = await Astro.glob('../pages/projects/*.md')
-const pageTitle = "Mis proyectos"
-const bg = '/bg-projects.webp'
+const pageTitle = "Proyectos"
+const projectFiles = import.meta.glob('../pages/projects/*.md', { eager: true })
+const allProjects = Object.values(projectFiles)
+    .map((file: any) => ({
+        url: file.url,
+        frontmatter: file.frontmatter
+    }))
 ---
 
-<BaseLayout pageTitle={ pageTitle } bg={ bg }>
-    <section class="pt-32 sm:pt-20 flex flex-col items-center gap-5 md:gap-10">
-        <h1 class="text-xl md:text-2xl 2xl:text-3xl text-center font-title tracking-widest">Proyectos</h1>
+<BaseLayout pageTitle={ pageTitle }>
+    <section class="px-3 sm:px-0 pb-4 sm:pb-0 pt-28 sm:pt-20 flex flex-col items-center gap-5 md:gap-10">
+        <h1 class="text-2xl md:text-3xl 2xl:text-4xl text-center font-title tracking-widest">Proyectos</h1>
         <div class="w-full max-w-6xl grid gap-4 grid-cols-1 md:grid-cols-2">
             {allProjects.map((project) => 
                 <Card url={ project.url } cardTitle={ project.frontmatter.title } img={ project.frontmatter.image.src } bg={ project.frontmatter.bg.src } />

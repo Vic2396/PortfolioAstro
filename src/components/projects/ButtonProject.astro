@@ -1,0 +1,14 @@
+---
+const { projectUrl, nameProject, buttonClass, urlClass, reverse = false } = Astro.props
+---
+
+<button class=`${ buttonClass } grid cursor-pointer`>
+    <a href={ projectUrl } 
+        class=`${ urlClass } grid items-center py-1 px-3 text-white bg-slate-800 
+            rounded-full shadow-lg transition duration-300 hover:bg-gray-700 focus:outline-none dark:bg-gray-700
+            focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 hover:dark:bg-gray-800`>
+    
+        { reverse ? <slot /> : <span class="w-full text-center font-title tracking-widest text-sm md:text-lg">{ nameProject } </span> }
+        { reverse ? <span class="w-full text-center font-title tracking-widest text-sm md:text-lg">{ nameProject } </span> : <slot /> }
+    </a>
+</button>

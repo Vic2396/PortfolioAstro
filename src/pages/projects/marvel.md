@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownDetailsProject.astro
+layout: ../../layouts/DetailsProjectLayout.astro
 
 title: 'Marvel API'
 
