@@ -40,7 +40,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
 ---
 
 <BaseLayout pageTitle={ frontmatter.title }>
-  <div class=`pb-4 pt-28 sm:pt-20 w-full flex flex-col gap-4 items-center justify-between justify-self-center`>
+  <div class=`pb-4 sm:px-4 sm:pb-5 xl:px-32 2xl:px-36 pt-28 sm:pt-20 w-full flex flex-col gap-4 items-center justify-between justify-self-center`>
     <section class="relative w-full px-4 grid grid-cols-1 justify-items-center items-center gap-4 xl:gap-6 text-justify">
       <h1 class="font-title tracking-widest text-3xl md:text-4xl">
         { frontmatter.title }
@@ -86,9 +86,9 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
         }
       </div>
 
-      <Image src={ frontmatter.image.src } alt={ frontmatter.title } width=300 height=200 class="w-28 h-28 md:w-40 md:h-40 xl:w-52 xl:h-52 object-contain rounded-full bg-neutral-700/80 shadow shadow-slate-900 dark:shadow-gray-200" />
+      <Image src={ frontmatter.image.src } alt={ frontmatter.title } width=300 height=200 class="w-28 h-28 md:w-40 md:h-40 xl:w-40 xl:h-40 object-contain rounded-full bg-black/60 shadow shadow-slate-900 dark:shadow-gray-200" />
       
-      <div class="w-full grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 xl:gap-6 md:text-xl">
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 xl:gap-6 text-lg md:text-xl xl:text-lg">
         <SectionProjectLayout title={ titles[1] } className="bg-gray-300/60 dark:bg-slate-600/60">
           <ul class="font-extrabold pl-4 list-outside list-disc">
             { Object.values(frontmatter.features).map((feature) => (
@@ -99,11 +99,11 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
 
         { frontmatter.technologies && 
           <SectionProjectLayout title={ titles[2] } className="bg-gray-300/60 dark:bg-slate-600/60">
-            <ul class="w-full h-full grid grid-cols-4 gap-4 justify-between items-center">
+            <ul class="w-full h-full grid grid-flow-col gap-4 justify-between items-center">
               { frontmatter.technologies.map((technology: keyof typeof technologies) => (
                 technologies[technology] ? (
                   <li class="grid justify-center">
-                    <Image src={ technologies[technology] } alt={ technology } width=50 height=50 class="w-10 h-10 xl:w-14 xl:h-14 p-1 rounded bg-slate-500/30 dark:bg-slate-300" />
+                    <Image src={ technologies[technology] } alt={ technology } width=50 height=50 class="w-10 h-10 xl:w-12 xl:h-12 p-1 rounded bg-slate-500/30 dark:bg-slate-300" />
                   </li>
                 ) : (
                   <li>{ technology }</li>

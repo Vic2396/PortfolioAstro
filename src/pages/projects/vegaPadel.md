@@ -14,7 +14,7 @@ githubPages: 'https://vic2396.github.io/VegaPadel/'
 description: 'Vega Pádel es un club de pádel que a la vez tiene tienda para vender todos los productos relaccionados con este deporte.'
 
 challenges:
-    1: 'El reto fue desarrollar el menú, donde separamos por materiales cada material con un submenú con subcategorías para ir al producto en función de lo seleccionado.'
+    1: 'Desarrollar el menú, donde cada material tiene un submenú con subcategorías para ir al producto deseado de forma más precisa.'
 
 features:
     1: 'Pedidos online'
