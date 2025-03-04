@@ -1,9 +1,7 @@
 ---
-import { Image } from 'astro:assets'
-
 const { src, name } = Astro.props
 ---
 
 <div class="p-1.5 grid justify-center">
-    <Image src={ src } alt={ name } width=50 height=50 class="w-10 h-10 xl:w-14 xl:h-14 p-1 rounded bg-slate-500/30 dark:bg-slate-300" />
+    <img src={ src } alt={ name } class="w-10 h-10 xl:w-14 xl:h-14 p-1 rounded bg-slate-500/30 dark:bg-slate-300">
 </div>

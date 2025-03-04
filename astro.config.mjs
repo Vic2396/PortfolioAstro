@@ -8,5 +8,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: `https://vic2396.github.io/PortfolioAstro/`,
+  site: `https://vmr23.netlify.app`,
 });
