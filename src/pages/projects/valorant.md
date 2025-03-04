@@ -4,9 +4,9 @@ layout: ../../layouts/DetailsProjectLayout.astro
 title: 'Valorant API'
 
 image:
-    src: '/projects/valorant/logo.svg'
+    src: '../projects/valorant/logo.svg'
 bg: 
-    src: '/projects/valorant/bg.webp'
+    src: '../projects/valorant/bg.webp'
 
 github: 'https://github.com/Vic2396/ValorantAPI'
 githubPages: 'https://vic2396.github.io/ValorantAPI/'
